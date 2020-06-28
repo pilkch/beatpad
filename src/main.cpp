@@ -92,7 +92,7 @@ void AddFile(const std::string& sFilePath, std::list<cFolder>& folders)
   for (auto& folder : folders) {
     std::string type = GetThirdFolder(sFilePath);
     if (folder.name == type) {
-      folder.push_back(sFilePath);
+      folder.files.push_back(sFilePath);
       return;
     }
   }
@@ -100,7 +100,7 @@ void AddFile(const std::string& sFilePath, std::list<cFolder>& folders)
   // We didn't find a match so just add it to the misc group
   for (auto& folder : folders) {
     if (folder.name == "misc") {
-      folder.push_back(sFilePath);
+      folder.files.push_back(sFilePath);
       return;
     }
   }
