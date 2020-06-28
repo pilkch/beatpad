@@ -118,7 +118,7 @@ int main(int argc, char **argv)
 
     o<<before;
 
-    const std::list<std::string> files = beatpad::GetAudioFilesInDirectory("audio");
+    const std::list<std::string> files = beatpad::GetAudioFilesInDirectory("samples");
 
     // Write out each item
     size_t id = 0;
