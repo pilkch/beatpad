@@ -18,38 +18,49 @@ You should have received a copy of the GNU General Public License
 along with this program; if not, write to the Free Software  
 Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.  
 
+### Build
+
+1. Build the template application
+```bash
+make clean
+make
+```
+2. Build index.html from index.html.template:
+```bash
+./create-index-html
+```
 
 ### Credits
 
 #### Code
 
-*   [Source code](https://github.com/pilkch/soundboard)
+*   [Source code](https://github.com/pilkch/beatpad)
+*   [Source code](https://chris.iluo.net/projects/beatpad)
 
-This is a mash up of these two projects:
+Based on this project:
+
+*   [Source code](https://chris.iluo.net/projects/soundboard)
+
+Which is a mash up of these two projects:
 
 *   [Bootstrap HTML5 Soundboard](https://github.com/sk33lz/bootstrap-html5-soundboard)
 *   [Using Modern CSS to Build a Responsive Image Grid](https://www.sitepoint.com/using-modern-css-to-build-a-responsive-image-grid/)
 
 #### Sounds
 
-These free sounds are used:
+Sounds from these sound packs are used:
 
-*   [https://freesound.org/people/schademans/sounds/13290/](https://freesound.org/people/schademans/sounds/13290/)
-*   [https://freesound.org/people/ljudman/sounds/33246/](https://freesound.org/people/ljudman/sounds/33246/)
-*   [https://freesound.org/people/18hiltc/sounds/208532/](https://freesound.org/people/18hiltc/sounds/208532/)
-*   [https://freesound.org/people/iskweldog/sounds/200971/](https://freesound.org/people/iskweldog/sounds/200971/)
-*   [https://freesound.org/people/rsanchez44/sounds/169108/](https://freesound.org/people/rsanchez44/sounds/169108/)
-*   [https://freesound.org/people/Bertrof/sounds/131660/](https://freesound.org/people/Bertrof/sounds/131660/)
-*   [https://freesound.org/people/Goup_1/sounds/195396/](https://freesound.org/people/Goup_1/sounds/195396/)
-*   [http://soundbible.com/2100-Splash-Rock-In-Lake.html](http://soundbible.com/2100-Splash-Rock-In-Lake.html)
-*   [http://soundbible.com/2148-Chinese-Gong.html](http://soundbible.com/2148-Chinese-Gong.html)
-*   [http://soundbible.com/2162-Human-Heartbeat.html](http://soundbible.com/2162-Human-Heartbeat.html)
-*   [http://soundbible.com/2171-Church-Bell-Chime.html](http://soundbible.com/2171-Church-Bell-Chime.html)
-*   [http://soundbible.com/2180-Meadowlark.html](http://soundbible.com/2180-Meadowlark.html)
-*   [http://soundbible.com/2179-Dixie-Horn.html](http://soundbible.com/2179-Dixie-Horn.html)
-*   [http://soundbible.com/2177-Steam-Train-Whistle.html](http://soundbible.com/2177-Steam-Train-Whistle.html)
-*   [http://soundbible.com/2184-Police-Whistle.html](http://soundbible.com/2184-Police-Whistle.html)
-*   [http://soundbible.com/2185-Old-School-Bell.html](http://soundbible.com/2185-Old-School-Bell.html)
-*   [http://soundbible.com/2190-Front-Desk-Bell.html](http://soundbible.com/2190-Front-Desk-Bell.html)
-*   [http://soundbible.com/2192-Fire-Truck-Horn.html](http://soundbible.com/2192-Fire-Truck-Horn.html)
-*   [http://soundbible.com/2193-Flock-Seagulls.html](http://soundbible.com/2193-Flock-Seagulls.html)
+*   [https://www.antidoteaudio.com/freebies](https://www.antidoteaudio.com/freebies)
+*   [https://cymatics.fm/collections/](https://cymatics.fm/collections/)
+*   [https://www.ghosthack.de/free_sample_packs/100-Dubstep-Samples/](https://www.ghosthack.de/free_sample_packs/100-Dubstep-Samples/)
+*   [https://www.ghosthack.de/free_sample_packs/trap-drum-loops/](https://www.ghosthack.de/free_sample_packs/trap-drum-loops/)
+*   [https://www.ghosthack.de/free_sample_packs/Dubstep---Trap-Sample-Pack-4/](https://www.ghosthack.de/free_sample_packs/Dubstep---Trap-Sample-Pack-4/)
+*   [https://www.blumarten.com/product/junglejungle-free-sample-pack/](https://www.blumarten.com/product/junglejungle-free-sample-pack/)
+*   [https://www.looperman.com/loops/detail/69101/heavy-dubstep-wobble-by-timmydarkside-free-140bpm-dubstep-bass-loop](https://www.looperman.com/loops/detail/69101/heavy-dubstep-wobble-by-timmydarkside-free-140bpm-dubstep-bass-loop)
+*   [https://www.looperman.com/loops/detail/64225/dubstep-wobble-part-1-by-quizzen-free-140bpm-dubstep-wobble-bass-loop](https://www.looperman.com/loops/detail/64225/dubstep-wobble-part-1-by-quizzen-free-140bpm-dubstep-wobble-bass-loop)
+*   [https://www.looperman.com/loops/detail/61912/dirty-wobbles-2-by-spivkurl-free-140bpm-dubstep-wobble-bass-loop](https://www.looperman.com/loops/detail/61912/dirty-wobbles-2-by-spivkurl-free-140bpm-dubstep-wobble-bass-loop)
+*   [https://www.looperman.com/loops/detail/52120/dubstep-wobble-3-138bpm-by-mmedia-free-138bpm-dubstep-bass-loop](https://www.looperman.com/loops/detail/52120/dubstep-wobble-3-138bpm-by-mmedia-free-138bpm-dubstep-bass-loop)
+*   [https://www.looperman.com/loops/detail/140612/drop-like-deadmau5-130bpm-house-synth-loop](https://www.looperman.com/loops/detail/140612/drop-like-deadmau5-130bpm-house-synth-loop)
+*   [https://www.looperman.com/loops/detail/177137/future-loop-90bpm-electronic-pad-loop](https://www.looperman.com/loops/detail/177137/future-loop-90bpm-electronic-pad-loop)
+*   [http://doa.totallyowns.co.uk/samples/packs/doa/](http://doa.totallyowns.co.uk/samples/packs/doa/)
+*   [https://page.waproduction.com/free-anniversary-collection-6](https://page.waproduction.com/free-anniversary-collection-6)
