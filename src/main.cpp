@@ -161,7 +161,7 @@ int main(int argc, char **argv)
 
     o<<before;
 
-    std::list<cFolder> folders = {
+    std::list<beatpad::cFolder> folders = {
       { "tom", "red" },
       { "crash", "orange" },
       { "snare", "mustard" },
