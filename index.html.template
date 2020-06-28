@@ -19,7 +19,7 @@
 
   <body>
     <section id="soundboard">
-INSERT_SAMPLES
+INSERT_BUTTONS
 
       <ul id="doc" class="list floated soundboard clearfix">
       </ul>
