@@ -25,10 +25,7 @@ void PrintUsage()
 
 size_t GetFileSizeBytes(const std::string& sFilePath)
 {
-  struct stat s;
-  if (stat(sFilePath.c_str(), &s) < 0) return 0;
-
-  return s.st_size;
+  return std::filesystem::file_size(sFilePath);
 }
 
 bool ReadFileIntoString(const std::string& sFilePath, size_t nMaxFileSizeBytes, std::string& contents)
