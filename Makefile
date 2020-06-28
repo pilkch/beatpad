@@ -25,11 +25,12 @@ endif
 
 all: create-index-html
 
-create-index-html:
+%.o: src/%.cpp
+	@$(CC) -c $(CPPFLAGS) $< -o $@
+
+create-index-html: $(OBJ)
 	@$(CC) -o $@ main.o $(LDFLAGS) $(LDLIBS)
 
-%.o: %.cpp
-	@$(CC) -c $(CPPFLAGS) $< -o $@
 
 clean:
 	@rm -f $(OBJ) create-index-html *~ core tags $(BINS)
