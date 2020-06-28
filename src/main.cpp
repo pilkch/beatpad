@@ -71,15 +71,15 @@ std::string GetThirdFolder(const std::string& sPath)
   std::string delim = "/";
 
   auto start = 0U;
-  auto end = s.find(delim);
+  auto end = sPath.find(delim);
   size_t i = 0;
   while (end != std::string::npos) {
     if (i == 2) {
-      return s.substr(start, end - start);
+      return sPath.substr(start, end - start);
     }
 
     start = end + delim.length();
-    end = s.find(delim, start);
+    end = sPath.find(delim, start);
 
     i++;
   }
@@ -90,9 +90,9 @@ std::string GetThirdFolder(const std::string& sPath)
 void AddFile(const std::string& sFilePath, std::list<cFolder>& folders)
 {
   for (auto& folder : folders) {
-    std::string type = GetThirdFolder(entry.path());
+    std::string type = GetThirdFolder(sFilePath);
     if (folder.name == type) {
-      folder.push_back(entry.path());
+      folder.push_back(sFilePath);
       return;
     }
   }
@@ -100,7 +100,7 @@ void AddFile(const std::string& sFilePath, std::list<cFolder>& folders)
   // We didn't find a match so just add it to the misc group
   for (auto& folder : folders) {
     if (folder.name == "misc") {
-      folder.push_back(entry.path());
+      folder.push_back(sFilePath);
       return;
     }
   }
@@ -161,18 +161,19 @@ int main(int argc, char **argv)
 
     o<<before;
 
-    std::list<cFolder> folders;
-    folders.push_back("tom", "red");
-    folders.push_back("crash", "orange");
-    folders.push_back("snare", "mustard");
-    folders.push_back("kick", "yellow");
-    folders.push_back("bass", "blue");
-    folders.push_back("break", "purple");
-    folders.push_back("synth", "cyan");
-    folders.push_back("808", "teal");
-    folders.push_back("voice", "yellow");
-    folders.push_back("vox", "green");
-    folders.push_back("misc", "brown");
+    std::list<cFolder> folders = {
+      { "tom", "red" },
+      { "crash", "orange" },
+      { "snare", "mustard" },
+      { "kick", "yellow" },
+      { "bass", "blue" },
+      { "break", "purple" },
+      { "synth", "cyan" },
+      { "808", "teal" },
+      { "voice", "yellow" },
+      { "vox", "green" },
+      { "misc", "brown" },
+    };
     beatpad::GetAudioFilesInDirectory("samples", folders);
 
     // Write out each item
