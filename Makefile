@@ -28,7 +28,7 @@ all: create-index-html
 create-index-html:
 	@$(CC) -o $@ main.o $(LDFLAGS) $(LDLIBS)
 
-.cpp.o:
+%.o: %.cpp
 	@$(CC) -c $(CPPFLAGS) $< -o $@
 
 clean:
