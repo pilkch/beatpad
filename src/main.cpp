@@ -64,7 +64,7 @@ struct cFolder {
   std::string name;
   std::string colour;
   std::list<std::string> files;
-}
+};
 
 std::string GetThirdFolder(const std::string& sPath)
 {
