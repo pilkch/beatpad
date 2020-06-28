@@ -60,16 +60,59 @@ bool ReadFileIntoString(const std::string& sFilePath, size_t nMaxFileSizeBytes, 
   return true;
 }
 
-std::list<std::string> GetAudioFilesInDirectory(const std::string& sFilePath)
-{
+struct cFolder {
+  std::string name;
+  std::string colour;
   std::list<std::string> files;
-  for (const auto & entry : std::experimental::filesystem::recursive_directory_iterator(sFilePath)) {
-    if ((entry.path().extension() == ".mp3") || (entry.path().extension() == ".wav")) {
-      files.push_back(entry.path());
+}
+
+std::string GetThirdFolder(const std::string& sPath)
+{
+  std::string delim = "/";
+
+  auto start = 0U;
+  auto end = s.find(delim);
+  size_t i = 0;
+  while (end != std::string::npos) {
+    if (i == 2) {
+      return s.substr(start, end - start);
+    }
+
+    start = end + delim.length();
+    end = s.find(delim, start);
+
+    i++;
+  }
+
+  return "";
+}
+
+void AddFile(const std::string& sFilePath, std::list<cFolder>& folders)
+{
+  for (auto& folder : folders) {
+    std::string type = GetThirdFolder(entry.path());
+    if (folder.name == type) {
+      folder.push_back(entry.path());
+      return;
     }
   }
 
-  return files;
+  // We didn't find a match so just add it to the misc group
+  for (auto& folder : folders) {
+    if (folder.name == "misc") {
+      folder.push_back(entry.path());
+      return;
+    }
+  }
+}
+
+void GetAudioFilesInDirectory(const std::string& sFilePath, std::list<cFolder>& folders)
+{
+  for (const auto & entry : std::experimental::filesystem::recursive_directory_iterator(sFilePath)) {
+    if ((entry.path().extension() == ".mp3") || (entry.path().extension() == ".wav")) {
+      AddFile(entry.path(), folders);
+    }
+  }
 }
 
 }
@@ -118,19 +161,34 @@ int main(int argc, char **argv)
 
     o<<before;
 
-    const std::list<std::string> files = beatpad::GetAudioFilesInDirectory("samples");
+    std::list<cFolder> folders;
+    folders.push_back("tom", "red");
+    folders.push_back("crash", "orange");
+    folders.push_back("snare", "mustard");
+    folders.push_back("kick", "yellow");
+    folders.push_back("bass", "blue");
+    folders.push_back("break", "purple");
+    folders.push_back("synth", "cyan");
+    folders.push_back("808", "teal");
+    folders.push_back("voice", "yellow");
+    folders.push_back("vox", "green");
+    folders.push_back("misc", "brown");
+    beatpad::GetAudioFilesInDirectory("samples", folders);
 
     // Write out each item
     size_t id = 0;
-    for (auto& file : files) {
-      id++;
-      const std::string sTitle = "Title";
-      o<<"      <figure>"<<std::endl;
-      o<<"        <img class=\"soundboardimg\" src=\"images/red.png\" alt=\"\" onclick=\"document.getElementById('"<<id<<"').play();\">"<<std::endl;
-      o<<"        <audio id=\""<<id<<"\" title=\""<<sTitle<<"\">"<<std::endl;
-      o<<"          <source src=\""<<file<<"\" />"<<std::endl;
-      o<<"        </audio>"<<std::endl;
-      o<<"      </figure>"<<std::endl;
+    for (auto& folder : folders) {
+      const std::string colour = folder.colour;
+      for (auto& file : folder.files) {
+        id++;
+        const std::string sTitle = "Title";
+        o<<"      <figure>"<<std::endl;
+        o<<"        <img class=\"soundboardimg\" src=\"images/"<<colour<<".png\" alt=\"\" onclick=\"document.getElementById('"<<id<<"').play();\">"<<std::endl;
+        o<<"        <audio id=\""<<id<<"\" title=\""<<sTitle<<"\">"<<std::endl;
+        o<<"          <source src=\""<<file<<"\" />"<<std::endl;
+        o<<"        </audio>"<<std::endl;
+        o<<"      </figure>"<<std::endl;
+      }
     }
 
     o<<after;
