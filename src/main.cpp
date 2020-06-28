@@ -1,6 +1,8 @@
 #include <cstring>
 
 #include <iostream>
+#include <fstream>
+#include <list>
 #include <string>
 
 #include <experimental/filesystem>
@@ -23,9 +25,14 @@ void PrintUsage()
   std::cout<<"-h|--h|--help:\tPrint this usage information"<<std::endl;
 }
 
+bool TestFileExists(const std::string& sFilePath)
+{
+  return std::experimental::filesystem::exists(sFilePath);
+}
+
 size_t GetFileSizeBytes(const std::string& sFilePath)
 {
-  return std::filesystem::file_size(sFilePath);
+  return std::experimental::filesystem::file_size(sFilePath);
 }
 
 bool ReadFileIntoString(const std::string& sFilePath, size_t nMaxFileSizeBytes, std::string& contents)
