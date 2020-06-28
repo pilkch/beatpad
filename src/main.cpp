@@ -117,10 +117,22 @@ void GetAudioFilesInDirectory(const std::string& sFilePath, std::list<cFolder>& 
   }
 }
 
+// https://stackoverflow.com/a/3418285/1074390
+void replaceAll(std::string& text, const std::string& from, const std::string& to)
+{
+  if (from.empty()) return;
+
+  size_t start_pos = 0;
+  while ((start_pos = text.find(from, start_pos)) != std::string::npos) {
+    text.replace(start_pos, from.length(), to);
+    start_pos += to.length(); // In case 'to' contains 'from', like replacing 'x' with 'yx'
+  }
+}
+
 std::string HTMLEncode(const std::string& text)
 {
   std::string output = text;
-  output.replace("#", "%23");
+  replaceAll(output, "#", "%23");
   return output;
 }
 
