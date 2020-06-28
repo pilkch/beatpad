@@ -61,6 +61,8 @@ bool ReadFileIntoString(const std::string& sFilePath, size_t nMaxFileSizeBytes, 
 }
 
 struct cFolder {
+  ~ cFolder() {} // Silence -Winline
+
   std::string name;
   std::string colour;
   std::list<std::string> files;
