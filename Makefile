@@ -2,13 +2,11 @@
 DEBUG	= -O3
 CC	= g++
 
-LIBXML_ROOT ?= /usr/local/xml
-
 INCLUDE	= -I/usr/local/include
-CPPFLAGS	= $(DEBUG) -std=c++11 -std=c++1y -Wall -Winline -pipe $(INCLUDE) -I$(LIBXML_ROOT)/include/libxml2
+CPPFLAGS	= $(DEBUG) -std=c++11 -std=c++1y -Wall -Winline -pipe $(INCLUDE)
 
 LDFLAGS	= -L/usr/local/lib
-LDLIBS  = -L$(LIBXML_ROOT)/lib -lxml2 -lstdc++fs -lpthread -lm
+LDLIBS  = -lstdc++fs -lpthread -lm
 
 SRC_DIR   := src
 
