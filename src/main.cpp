@@ -117,6 +117,13 @@ void GetAudioFilesInDirectory(const std::string& sFilePath, std::list<cFolder>& 
   }
 }
 
+std::string HTMLEncode(const std::string& text)
+{
+  std::string output = text;
+  output.replace("#", "%23");
+  return output;
+}
+
 }
 
 int main(int argc, char **argv)
@@ -168,10 +175,10 @@ int main(int argc, char **argv)
       { "crash", "orange" },
       { "snare", "mustard" },
       { "kick", "yellow" },
-      { "bass", "blue" },
+      { "bass", "cyan" },
+      { "synth", "teal" },
+      { "808", "blue" },
       { "break", "purple" },
-      { "synth", "cyan" },
-      { "808", "teal" },
       { "voice", "yellow" },
       { "vox", "green" },
       { "misc", "brown" },
@@ -188,7 +195,7 @@ int main(int argc, char **argv)
         o<<"      <figure>"<<std::endl;
         o<<"        <img class=\"soundboardimg\" src=\"images/"<<colour<<".png\" alt=\"\" onclick=\"document.getElementById('"<<id<<"').play();\">"<<std::endl;
         o<<"        <audio id=\""<<id<<"\" title=\""<<sTitle<<"\">"<<std::endl;
-        o<<"          <source src=\""<<file<<"\" />"<<std::endl;
+        o<<"          <source src=\""<<beatpad::HTMLEncode(file)<<"\" />"<<std::endl;
         o<<"        </audio>"<<std::endl;
         o<<"      </figure>"<<std::endl;
       }
