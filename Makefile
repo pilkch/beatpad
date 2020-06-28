@@ -23,7 +23,7 @@ endif
 all: create-index-html
 
 create-index-html:
-	@$(CC) -o $@ main.o $(LDFLAGS) $(LDLIBS)
+	@$(CC) -o $@ src/main.o $(LDFLAGS) $(LDLIBS)
 
 .cpp.o:
 	@$(CC) -c $(CPPFLAGS) $< -o $@
