@@ -32,10 +32,10 @@ make
 
 ### Credits
 
-#### Code
+#### Project
 
 *   [Source code](https://github.com/pilkch/beatpad)
-*   [Source code](https://chris.iluo.net/projects/beatpad)
+*   [Demo](https://chris.iluo.net/projects/beatpad)
 
 Based on this project:
 
