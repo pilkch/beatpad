@@ -17,660 +17,333 @@
     <title>Beat Pad</title>
   </head>
 
-  <body>
+  <body onload="init();">
     <section id="soundboard">
       <figure>
-        <img class="soundboardimg" src="images/red.png" alt="" onclick="document.getElementById('1').play();">
-        <audio id="1" title="Title">
-          <source src="samples/cymatics/tom/Cymatics - Terror Tom 012.wav" />
-        </audio>
+        <img class="soundboardimg" src="images/red.png" alt="samples/cymatics/tom/Cymatics - Terror Tom 012.wav" onclick="playSound(1);"/>
       </figure>
       <figure>
-        <img class="soundboardimg" src="images/red.png" alt="" onclick="document.getElementById('2').play();">
-        <audio id="2" title="Title">
-          <source src="samples/cymatics/tom/Cymatics - Terror Tom 002.wav" />
-        </audio>
+        <img class="soundboardimg" src="images/red.png" alt="samples/cymatics/tom/Cymatics - Terror Tom 002.wav" onclick="playSound(2);"/>
       </figure>
       <figure>
-        <img class="soundboardimg" src="images/orange.png" alt="" onclick="document.getElementById('3').play();">
-        <audio id="3" title="Title">
-          <source src="samples/cymatics/crash/Cymatics - Raptor Crash 1.wav" />
-        </audio>
+        <img class="soundboardimg" src="images/orange.png" alt="samples/cymatics/crash/Cymatics - Raptor Crash 1.wav" onclick="playSound(3);"/>
       </figure>
       <figure>
-        <img class="soundboardimg" src="images/mustard.png" alt="" onclick="document.getElementById('4').play();">
-        <audio id="4" title="Title">
-          <source src="samples/ghosthack/snare/Snare2.wav" />
-        </audio>
+        <img class="soundboardimg" src="images/mustard.png" alt="samples/ghosthack/snare/Snare2.wav" onclick="playSound(4);"/>
       </figure>
       <figure>
-        <img class="soundboardimg" src="images/mustard.png" alt="" onclick="document.getElementById('5').play();">
-        <audio id="5" title="Title">
-          <source src="samples/ghosthack/snare/Snare8.wav" />
-        </audio>
+        <img class="soundboardimg" src="images/mustard.png" alt="samples/ghosthack/snare/Snare8.wav" onclick="playSound(5);"/>
       </figure>
       <figure>
-        <img class="soundboardimg" src="images/mustard.png" alt="" onclick="document.getElementById('6').play();">
-        <audio id="6" title="Title">
-          <source src="samples/ghosthack/snare/Snare5.wav" />
-        </audio>
+        <img class="soundboardimg" src="images/mustard.png" alt="samples/ghosthack/snare/Snare5.wav" onclick="playSound(6);"/>
       </figure>
       <figure>
-        <img class="soundboardimg" src="images/mustard.png" alt="" onclick="document.getElementById('7').play();">
-        <audio id="7" title="Title">
-          <source src="samples/ghosthack/snare/Snare7.wav" />
-        </audio>
+        <img class="soundboardimg" src="images/mustard.png" alt="samples/ghosthack/snare/Snare7.wav" onclick="playSound(7);"/>
       </figure>
       <figure>
-        <img class="soundboardimg" src="images/mustard.png" alt="" onclick="document.getElementById('8').play();">
-        <audio id="8" title="Title">
-          <source src="samples/cymatics/snare/Cymatics - Dubstep Snare 8 - A.wav" />
-        </audio>
+        <img class="soundboardimg" src="images/mustard.png" alt="samples/cymatics/snare/Cymatics - Dubstep Snare 8 - A.wav" onclick="playSound(8);"/>
       </figure>
       <figure>
-        <img class="soundboardimg" src="images/mustard.png" alt="" onclick="document.getElementById('9').play();">
-        <audio id="9" title="Title">
-          <source src="samples/cymatics/snare/Cymatics - Dubstep Snare 2 - E.wav" />
-        </audio>
+        <img class="soundboardimg" src="images/mustard.png" alt="samples/cymatics/snare/Cymatics - Dubstep Snare 2 - E.wav" onclick="playSound(9);"/>
       </figure>
       <figure>
-        <img class="soundboardimg" src="images/mustard.png" alt="" onclick="document.getElementById('10').play();">
-        <audio id="10" title="Title">
-          <source src="samples/cymatics/snare/Cymatics - Dubstep Snare 5 - G.wav" />
-        </audio>
+        <img class="soundboardimg" src="images/mustard.png" alt="samples/cymatics/snare/Cymatics - Dubstep Snare 5 - G.wav" onclick="playSound(10);"/>
       </figure>
       <figure>
-        <img class="soundboardimg" src="images/yellow.png" alt="" onclick="document.getElementById('11').play();">
-        <audio id="11" title="Title">
-          <source src="samples/antidote audio/kick/Antidote Audio - Dubstep Kick 02.wav" />
-        </audio>
+        <img class="soundboardimg" src="images/yellow.png" alt="samples/antidote audio/kick/Antidote Audio - Dubstep Kick 02.wav" onclick="playSound(11);"/>
       </figure>
       <figure>
-        <img class="soundboardimg" src="images/yellow.png" alt="" onclick="document.getElementById('12').play();">
-        <audio id="12" title="Title">
-          <source src="samples/antidote audio/kick/Antidote Audio - Dubstep Kick 04.wav" />
-        </audio>
+        <img class="soundboardimg" src="images/yellow.png" alt="samples/antidote audio/kick/Antidote Audio - Dubstep Kick 04.wav" onclick="playSound(12);"/>
       </figure>
       <figure>
-        <img class="soundboardimg" src="images/yellow.png" alt="" onclick="document.getElementById('13').play();">
-        <audio id="13" title="Title">
-          <source src="samples/antidote audio/kick/Antidote Audio - Dubstep Kick 03.wav" />
-        </audio>
+        <img class="soundboardimg" src="images/yellow.png" alt="samples/antidote audio/kick/Antidote Audio - Dubstep Kick 03.wav" onclick="playSound(13);"/>
       </figure>
       <figure>
-        <img class="soundboardimg" src="images/yellow.png" alt="" onclick="document.getElementById('14').play();">
-        <audio id="14" title="Title">
-          <source src="samples/antidote audio/kick/Antidote Audio - Dubstep Kick 01.wav" />
-        </audio>
+        <img class="soundboardimg" src="images/yellow.png" alt="samples/antidote audio/kick/Antidote Audio - Dubstep Kick 01.wav" onclick="playSound(14);"/>
       </figure>
       <figure>
-        <img class="soundboardimg" src="images/yellow.png" alt="" onclick="document.getElementById('15').play();">
-        <audio id="15" title="Title">
-          <source src="samples/cymatics/kick/Cymatics - Dubstep Kick 2 - C.wav" />
-        </audio>
+        <img class="soundboardimg" src="images/yellow.png" alt="samples/cymatics/kick/Cymatics - Dubstep Kick 2 - C.wav" onclick="playSound(15);"/>
       </figure>
       <figure>
-        <img class="soundboardimg" src="images/yellow.png" alt="" onclick="document.getElementById('16').play();">
-        <audio id="16" title="Title">
-          <source src="samples/cymatics/kick/Cymatics - Dubstep Kick 5 - G.wav" />
-        </audio>
+        <img class="soundboardimg" src="images/yellow.png" alt="samples/cymatics/kick/Cymatics - Dubstep Kick 5 - G.wav" onclick="playSound(16);"/>
       </figure>
       <figure>
-        <img class="soundboardimg" src="images/yellow.png" alt="" onclick="document.getElementById('17').play();">
-        <audio id="17" title="Title">
-          <source src="samples/cymatics/kick/Cymatics - Grime Kick 7.wav" />
-        </audio>
+        <img class="soundboardimg" src="images/yellow.png" alt="samples/cymatics/kick/Cymatics - Grime Kick 7.wav" onclick="playSound(17);"/>
       </figure>
       <figure>
-        <img class="soundboardimg" src="images/cyan.png" alt="" onclick="document.getElementById('18').play();">
-        <audio id="18" title="Title">
-          <source src="samples/totallyowns/bass/dnbsamples_bass21.wav" />
-        </audio>
+        <img class="soundboardimg" src="images/cyan.png" alt="samples/totallyowns/bass/dnbsamples_bass21.wav" onclick="playSound(18);"/>
       </figure>
       <figure>
-        <img class="soundboardimg" src="images/cyan.png" alt="" onclick="document.getElementById('19').play();">
-        <audio id="19" title="Title">
-          <source src="samples/totallyowns/bass/dnbsamples_bass25.wav" />
-        </audio>
+        <img class="soundboardimg" src="images/cyan.png" alt="samples/totallyowns/bass/dnbsamples_bass25.wav" onclick="playSound(19);"/>
       </figure>
       <figure>
-        <img class="soundboardimg" src="images/cyan.png" alt="" onclick="document.getElementById('20').play();">
-        <audio id="20" title="Title">
-          <source src="samples/totallyowns/bass/bombbass.wav" />
-        </audio>
+        <img class="soundboardimg" src="images/cyan.png" alt="samples/totallyowns/bass/bombbass.wav" onclick="playSound(20);"/>
       </figure>
       <figure>
-        <img class="soundboardimg" src="images/cyan.png" alt="" onclick="document.getElementById('21').play();">
-        <audio id="21" title="Title">
-          <source src="samples/totallyowns/bass/BassStab2.wav" />
-        </audio>
+        <img class="soundboardimg" src="images/cyan.png" alt="samples/totallyowns/bass/BassStab2.wav" onclick="playSound(21);"/>
       </figure>
       <figure>
-        <img class="soundboardimg" src="images/cyan.png" alt="" onclick="document.getElementById('22').play();">
-        <audio id="22" title="Title">
-          <source src="samples/totallyowns/bass/dnbsamples_bass7.wav" />
-        </audio>
+        <img class="soundboardimg" src="images/cyan.png" alt="samples/totallyowns/bass/dnbsamples_bass7.wav" onclick="playSound(22);"/>
       </figure>
       <figure>
-        <img class="soundboardimg" src="images/cyan.png" alt="" onclick="document.getElementById('23').play();">
-        <audio id="23" title="Title">
-          <source src="samples/totallyowns/bass/bassStab.wav" />
-        </audio>
+        <img class="soundboardimg" src="images/cyan.png" alt="samples/totallyowns/bass/bassStab.wav" onclick="playSound(23);"/>
       </figure>
       <figure>
-        <img class="soundboardimg" src="images/cyan.png" alt="" onclick="document.getElementById('24').play();">
-        <audio id="24" title="Title">
-          <source src="samples/metalheadz/bass/Hidden Agenda sub.wav" />
-        </audio>
+        <img class="soundboardimg" src="images/cyan.png" alt="samples/metalheadz/bass/Hidden Agenda sub.wav" onclick="playSound(24);"/>
       </figure>
       <figure>
-        <img class="soundboardimg" src="images/cyan.png" alt="" onclick="document.getElementById('25').play();">
-        <audio id="25" title="Title">
-          <source src="samples/metalheadz/bass/Source Direct bass.wav" />
-        </audio>
+        <img class="soundboardimg" src="images/cyan.png" alt="samples/metalheadz/bass/Source Direct bass.wav" onclick="playSound(25);"/>
       </figure>
       <figure>
-        <img class="soundboardimg" src="images/cyan.png" alt="" onclick="document.getElementById('26').play();">
-        <audio id="26" title="Title">
-          <source src="samples/metalheadz/bass/Hidden Agenga bass.wav" />
-        </audio>
+        <img class="soundboardimg" src="images/cyan.png" alt="samples/metalheadz/bass/Hidden Agenga bass.wav" onclick="playSound(26);"/>
       </figure>
       <figure>
-        <img class="soundboardimg" src="images/cyan.png" alt="" onclick="document.getElementById('27').play();">
-        <audio id="27" title="Title">
-          <source src="samples/metalheadz/bass/Lemon D bass.wav" />
-        </audio>
+        <img class="soundboardimg" src="images/cyan.png" alt="samples/metalheadz/bass/Lemon D bass.wav" onclick="playSound(27);"/>
       </figure>
       <figure>
-        <img class="soundboardimg" src="images/cyan.png" alt="" onclick="document.getElementById('28').play();">
-        <audio id="28" title="Title">
-          <source src="samples/ghosthack/bass/Bassdrum3.wav" />
-        </audio>
+        <img class="soundboardimg" src="images/cyan.png" alt="samples/ghosthack/bass/Bassdrum3.wav" onclick="playSound(28);"/>
       </figure>
       <figure>
-        <img class="soundboardimg" src="images/cyan.png" alt="" onclick="document.getElementById('29').play();">
-        <audio id="29" title="Title">
-          <source src="samples/ghosthack/bass/Bassdrum2.wav" />
-        </audio>
+        <img class="soundboardimg" src="images/cyan.png" alt="samples/ghosthack/bass/Bassdrum2.wav" onclick="playSound(29);"/>
       </figure>
       <figure>
-        <img class="soundboardimg" src="images/cyan.png" alt="" onclick="document.getElementById('30').play();">
-        <audio id="30" title="Title">
-          <source src="samples/ghosthack/bass/Bassdrum4.wav" />
-        </audio>
+        <img class="soundboardimg" src="images/cyan.png" alt="samples/ghosthack/bass/Bassdrum4.wav" onclick="playSound(30);"/>
       </figure>
       <figure>
-        <img class="soundboardimg" src="images/cyan.png" alt="" onclick="document.getElementById('31').play();">
-        <audio id="31" title="Title">
-          <source src="samples/ghosthack/bass/Bassdrum1.wav" />
-        </audio>
+        <img class="soundboardimg" src="images/cyan.png" alt="samples/ghosthack/bass/Bassdrum1.wav" onclick="playSound(31);"/>
       </figure>
       <figure>
-        <img class="soundboardimg" src="images/teal.png" alt="" onclick="document.getElementById('32').play();">
-        <audio id="32" title="Title">
-          <source src="samples/junglejungle/synth/Warned Hit 2.wav" />
-        </audio>
+        <img class="soundboardimg" src="images/teal.png" alt="samples/junglejungle/synth/Warned Hit 2.wav" onclick="playSound(32);"/>
       </figure>
       <figure>
-        <img class="soundboardimg" src="images/teal.png" alt="" onclick="document.getElementById('33').play();">
-        <audio id="33" title="Title">
-          <source src="samples/junglejungle/synth/Warned Hit.wav" />
-        </audio>
+        <img class="soundboardimg" src="images/teal.png" alt="samples/junglejungle/synth/Warned Hit.wav" onclick="playSound(33);"/>
       </figure>
       <figure>
-        <img class="soundboardimg" src="images/teal.png" alt="" onclick="document.getElementById('34').play();">
-        <audio id="34" title="Title">
-          <source src="samples/junglejungle/synth/Walk Bass.wav" />
-        </audio>
+        <img class="soundboardimg" src="images/teal.png" alt="samples/junglejungle/synth/Walk Bass.wav" onclick="playSound(34);"/>
       </figure>
       <figure>
-        <img class="soundboardimg" src="images/teal.png" alt="" onclick="document.getElementById('35').play();">
-        <audio id="35" title="Title">
-          <source src="samples/totallyowns/synth/11.wav" />
-        </audio>
+        <img class="soundboardimg" src="images/teal.png" alt="samples/totallyowns/synth/11.wav" onclick="playSound(35);"/>
       </figure>
       <figure>
-        <img class="soundboardimg" src="images/teal.png" alt="" onclick="document.getElementById('36').play();">
-        <audio id="36" title="Title">
-          <source src="samples/metalheadz/synth/98synthstab.wav" />
-        </audio>
+        <img class="soundboardimg" src="images/teal.png" alt="samples/metalheadz/synth/98synthstab.wav" onclick="playSound(36);"/>
       </figure>
       <figure>
-        <img class="soundboardimg" src="images/teal.png" alt="" onclick="document.getElementById('37').play();">
-        <audio id="37" title="Title">
-          <source src="samples/waproduction/synth/WABHD_Synth_Shot_01_F.wav" />
-        </audio>
+        <img class="soundboardimg" src="images/teal.png" alt="samples/waproduction/synth/WABHD_Synth_Shot_01_F.wav" onclick="playSound(37);"/>
       </figure>
       <figure>
-        <img class="soundboardimg" src="images/teal.png" alt="" onclick="document.getElementById('38').play();">
-        <audio id="38" title="Title">
-          <source src="samples/waproduction/synth/WABHD_Synth_Shot_C%23_46.wav" />
-        </audio>
+        <img class="soundboardimg" src="images/teal.png" alt="samples/waproduction/synth/WABHD_Synth_Shot_C%23_46.wav" onclick="playSound(38);"/>
       </figure>
       <figure>
-        <img class="soundboardimg" src="images/teal.png" alt="" onclick="document.getElementById('39').play();">
-        <audio id="39" title="Title">
-          <source src="samples/waproduction/synth/WABHD_Synth_Shot_13_A.wav" />
-        </audio>
+        <img class="soundboardimg" src="images/teal.png" alt="samples/waproduction/synth/WABHD_Synth_Shot_13_A.wav" onclick="playSound(39);"/>
       </figure>
       <figure>
-        <img class="soundboardimg" src="images/teal.png" alt="" onclick="document.getElementById('40').play();">
-        <audio id="40" title="Title">
-          <source src="samples/waproduction/synth/WABHD_Synth_Shot_F_43.wav" />
-        </audio>
+        <img class="soundboardimg" src="images/teal.png" alt="samples/waproduction/synth/WABHD_Synth_Shot_F_43.wav" onclick="playSound(40);"/>
       </figure>
       <figure>
-        <img class="soundboardimg" src="images/teal.png" alt="" onclick="document.getElementById('41').play();">
-        <audio id="41" title="Title">
-          <source src="samples/ghosthack/synth/FX2.wav" />
-        </audio>
+        <img class="soundboardimg" src="images/teal.png" alt="samples/ghosthack/synth/FX2.wav" onclick="playSound(41);"/>
       </figure>
       <figure>
-        <img class="soundboardimg" src="images/teal.png" alt="" onclick="document.getElementById('42').play();">
-        <audio id="42" title="Title">
-          <source src="samples/ghosthack/synth/FX1.wav" />
-        </audio>
+        <img class="soundboardimg" src="images/teal.png" alt="samples/ghosthack/synth/FX1.wav" onclick="playSound(42);"/>
       </figure>
       <figure>
-        <img class="soundboardimg" src="images/teal.png" alt="" onclick="document.getElementById('43').play();">
-        <audio id="43" title="Title">
-          <source src="samples/ghosthack/synth/FX3.wav" />
-        </audio>
+        <img class="soundboardimg" src="images/teal.png" alt="samples/ghosthack/synth/FX3.wav" onclick="playSound(43);"/>
       </figure>
       <figure>
-        <img class="soundboardimg" src="images/teal.png" alt="" onclick="document.getElementById('44').play();">
-        <audio id="44" title="Title">
-          <source src="samples/ghosthack/synth/FXSaw.wav" />
-        </audio>
+        <img class="soundboardimg" src="images/teal.png" alt="samples/ghosthack/synth/FXSaw.wav" onclick="playSound(44);"/>
       </figure>
       <figure>
-        <img class="soundboardimg" src="images/blue.png" alt="" onclick="document.getElementById('45').play();">
-        <audio id="45" title="Title">
-          <source src="samples/waproduction/808/Medium/WAXVG_808_1_E_Medium.wav" />
-        </audio>
+        <img class="soundboardimg" src="images/blue.png" alt="samples/waproduction/808/Medium/WAXVG_808_1_E_Medium.wav" onclick="playSound(45);"/>
       </figure>
       <figure>
-        <img class="soundboardimg" src="images/blue.png" alt="" onclick="document.getElementById('46').play();">
-        <audio id="46" title="Title">
-          <source src="samples/waproduction/808/Medium/WAXVG_808_10_F_Medium.wav" />
-        </audio>
+        <img class="soundboardimg" src="images/blue.png" alt="samples/waproduction/808/Medium/WAXVG_808_10_F_Medium.wav" onclick="playSound(46);"/>
       </figure>
       <figure>
-        <img class="soundboardimg" src="images/blue.png" alt="" onclick="document.getElementById('47').play();">
-        <audio id="47" title="Title">
-          <source src="samples/waproduction/808/Heavy/WAXVG_808_8_F_Heavy.wav" />
-        </audio>
+        <img class="soundboardimg" src="images/blue.png" alt="samples/waproduction/808/Heavy/WAXVG_808_8_F_Heavy.wav" onclick="playSound(47);"/>
       </figure>
       <figure>
-        <img class="soundboardimg" src="images/blue.png" alt="" onclick="document.getElementById('48').play();">
-        <audio id="48" title="Title">
-          <source src="samples/waproduction/808/Heavy/WAXVG_808_1_E_Heavy.wav" />
-        </audio>
+        <img class="soundboardimg" src="images/blue.png" alt="samples/waproduction/808/Heavy/WAXVG_808_1_E_Heavy.wav" onclick="playSound(48);"/>
       </figure>
       <figure>
-        <img class="soundboardimg" src="images/blue.png" alt="" onclick="document.getElementById('49').play();">
-        <audio id="49" title="Title">
-          <source src="samples/waproduction/808/Mild/WAXVG_808_8_Eb_Mild.wav" />
-        </audio>
+        <img class="soundboardimg" src="images/blue.png" alt="samples/waproduction/808/Mild/WAXVG_808_8_Eb_Mild.wav" onclick="playSound(49);"/>
       </figure>
       <figure>
-        <img class="soundboardimg" src="images/blue.png" alt="" onclick="document.getElementById('50').play();">
-        <audio id="50" title="Title">
-          <source src="samples/waproduction/808/Mild/WAXVG_808_1_F_Mild.wav" />
-        </audio>
+        <img class="soundboardimg" src="images/blue.png" alt="samples/waproduction/808/Mild/WAXVG_808_1_F_Mild.wav" onclick="playSound(50);"/>
       </figure>
       <figure>
-        <img class="soundboardimg" src="images/blue.png" alt="" onclick="document.getElementById('51').play();">
-        <audio id="51" title="Title">
-          <source src="samples/waproduction/808/Mild/WAXVG_808_14_E_Mild.wav" />
-        </audio>
+        <img class="soundboardimg" src="images/blue.png" alt="samples/waproduction/808/Mild/WAXVG_808_14_E_Mild.wav" onclick="playSound(51);"/>
       </figure>
       <figure>
-        <img class="soundboardimg" src="images/blue.png" alt="" onclick="document.getElementById('52').play();">
-        <audio id="52" title="Title">
-          <source src="samples/waproduction/808/White Noise/WAXVG_808_8_F_White_Noise.wav" />
-        </audio>
+        <img class="soundboardimg" src="images/blue.png" alt="samples/waproduction/808/White Noise/WAXVG_808_8_F_White_Noise.wav" onclick="playSound(52);"/>
       </figure>
       <figure>
-        <img class="soundboardimg" src="images/purple.png" alt="" onclick="document.getElementById('53').play();">
-        <audio id="53" title="Title">
-          <source src="samples/totallyowns/break/dnbsamples_break17.wav" />
-        </audio>
+        <img class="soundboardimg" src="images/purple.png" alt="samples/totallyowns/break/dnbsamples_break17.wav" onclick="playSound(53);"/>
       </figure>
       <figure>
-        <img class="soundboardimg" src="images/purple.png" alt="" onclick="document.getElementById('54').play();">
-        <audio id="54" title="Title">
-          <source src="samples/totallyowns/break/dnbsamples_break2.wav" />
-        </audio>
+        <img class="soundboardimg" src="images/purple.png" alt="samples/totallyowns/break/dnbsamples_break2.wav" onclick="playSound(54);"/>
       </figure>
       <figure>
-        <img class="soundboardimg" src="images/purple.png" alt="" onclick="document.getElementById('55').play();">
-        <audio id="55" title="Title">
-          <source src="samples/totallyowns/break/dnbsamples_break19.wav" />
-        </audio>
+        <img class="soundboardimg" src="images/purple.png" alt="samples/totallyowns/break/dnbsamples_break19.wav" onclick="playSound(55);"/>
       </figure>
       <figure>
-        <img class="soundboardimg" src="images/yellow.png" alt="" onclick="document.getElementById('56').play();">
-        <audio id="56" title="Title">
-          <source src="samples/junglejungle/voice/Massive Vox.wav" />
-        </audio>
+        <img class="soundboardimg" src="images/yellow.png" alt="samples/junglejungle/voice/Massive Vox.wav" onclick="playSound(56);"/>
       </figure>
       <figure>
-        <img class="soundboardimg" src="images/yellow.png" alt="" onclick="document.getElementById('57').play();">
-        <audio id="57" title="Title">
-          <source src="samples/junglejungle/voice/Town Underground Vox.wav" />
-        </audio>
+        <img class="soundboardimg" src="images/yellow.png" alt="samples/junglejungle/voice/Town Underground Vox.wav" onclick="playSound(57);"/>
       </figure>
       <figure>
-        <img class="soundboardimg" src="images/yellow.png" alt="" onclick="document.getElementById('58').play();">
-        <audio id="58" title="Title">
-          <source src="samples/junglejungle/voice/Circles Vox.wav" />
-        </audio>
+        <img class="soundboardimg" src="images/yellow.png" alt="samples/junglejungle/voice/Circles Vox.wav" onclick="playSound(58);"/>
       </figure>
       <figure>
-        <img class="soundboardimg" src="images/yellow.png" alt="" onclick="document.getElementById('59').play();">
-        <audio id="59" title="Title">
-          <source src="samples/junglejungle/voice/Control Vox.wav" />
-        </audio>
+        <img class="soundboardimg" src="images/yellow.png" alt="samples/junglejungle/voice/Control Vox.wav" onclick="playSound(59);"/>
       </figure>
       <figure>
-        <img class="soundboardimg" src="images/yellow.png" alt="" onclick="document.getElementById('60').play();">
-        <audio id="60" title="Title">
-          <source src="samples/junglejungle/voice/Soul Vox.wav" />
-        </audio>
+        <img class="soundboardimg" src="images/yellow.png" alt="samples/junglejungle/voice/Soul Vox.wav" onclick="playSound(60);"/>
       </figure>
       <figure>
-        <img class="soundboardimg" src="images/yellow.png" alt="" onclick="document.getElementById('61').play();">
-        <audio id="61" title="Title">
-          <source src="samples/junglejungle/voice/On Fire Vox.wav" />
-        </audio>
+        <img class="soundboardimg" src="images/yellow.png" alt="samples/junglejungle/voice/On Fire Vox.wav" onclick="playSound(61);"/>
       </figure>
       <figure>
-        <img class="soundboardimg" src="images/yellow.png" alt="" onclick="document.getElementById('62').play();">
-        <audio id="62" title="Title">
-          <source src="samples/junglejungle/voice/Worries Soundboy.wav" />
-        </audio>
+        <img class="soundboardimg" src="images/yellow.png" alt="samples/junglejungle/voice/Worries Soundboy.wav" onclick="playSound(62);"/>
       </figure>
       <figure>
-        <img class="soundboardimg" src="images/yellow.png" alt="" onclick="document.getElementById('63').play();">
-        <audio id="63" title="Title">
-          <source src="samples/junglejungle/voice/My Sound Rude Boy.wav" />
-        </audio>
+        <img class="soundboardimg" src="images/yellow.png" alt="samples/junglejungle/voice/My Sound Rude Boy.wav" onclick="playSound(63);"/>
       </figure>
       <figure>
-        <img class="soundboardimg" src="images/yellow.png" alt="" onclick="document.getElementById('64').play();">
-        <audio id="64" title="Title">
-          <source src="samples/cymatics/voice/Cymatics - 1 2 3 Jump 4 - 140 BPM.wav" />
-        </audio>
+        <img class="soundboardimg" src="images/yellow.png" alt="samples/cymatics/voice/Cymatics - 1 2 3 Jump 4 - 140 BPM.wav" onclick="playSound(64);"/>
       </figure>
       <figure>
-        <img class="soundboardimg" src="images/yellow.png" alt="" onclick="document.getElementById('65').play();">
-        <audio id="65" title="Title">
-          <source src="samples/cymatics/voice/Cymatics - Throw Yo Hands Up - 140 BPM.wav" />
-        </audio>
+        <img class="soundboardimg" src="images/yellow.png" alt="samples/cymatics/voice/Cymatics - Throw Yo Hands Up - 140 BPM.wav" onclick="playSound(65);"/>
       </figure>
       <figure>
-        <img class="soundboardimg" src="images/brown.png" alt="" onclick="document.getElementById('66').play();">
-        <audio id="66" title="Title">
-          <source src="samples/junglejungle/Flutes Rhodes.wav" />
-        </audio>
+        <img class="soundboardimg" src="images/brown.png" alt="samples/junglejungle/Flutes Rhodes.wav" onclick="playSound(66);"/>
       </figure>
       <figure>
-        <img class="soundboardimg" src="images/brown.png" alt="" onclick="document.getElementById('67').play();">
-        <audio id="67" title="Title">
-          <source src="samples/junglejungle/Centuries Vocode.wav" />
-        </audio>
+        <img class="soundboardimg" src="images/brown.png" alt="samples/junglejungle/Centuries Vocode.wav" onclick="playSound(67);"/>
       </figure>
       <figure>
-        <img class="soundboardimg" src="images/brown.png" alt="" onclick="document.getElementById('68').play();">
-        <audio id="68" title="Title">
-          <source src="samples/junglejungle/Flutes Flute.wav" />
-        </audio>
+        <img class="soundboardimg" src="images/brown.png" alt="samples/junglejungle/Flutes Flute.wav" onclick="playSound(68);"/>
       </figure>
       <figure>
-        <img class="soundboardimg" src="images/brown.png" alt="" onclick="document.getElementById('69').play();">
-        <audio id="69" title="Title">
-          <source src="samples/junglejungle/Terrorist Vox Hit.wav" />
-        </audio>
+        <img class="soundboardimg" src="images/brown.png" alt="samples/junglejungle/Terrorist Vox Hit.wav" onclick="playSound(69);"/>
       </figure>
       <figure>
-        <img class="soundboardimg" src="images/brown.png" alt="" onclick="document.getElementById('70').play();">
-        <audio id="70" title="Title">
-          <source src="samples/junglejungle/Champion Scratch.wav" />
-        </audio>
+        <img class="soundboardimg" src="images/brown.png" alt="samples/junglejungle/Champion Scratch.wav" onclick="playSound(70);"/>
       </figure>
       <figure>
-        <img class="soundboardimg" src="images/brown.png" alt="" onclick="document.getElementById('71').play();">
-        <audio id="71" title="Title">
-          <source src="samples/junglejungle/Cosmik Rev.wav" />
-        </audio>
+        <img class="soundboardimg" src="images/brown.png" alt="samples/junglejungle/Cosmik Rev.wav" onclick="playSound(71);"/>
       </figure>
       <figure>
-        <img class="soundboardimg" src="images/brown.png" alt="" onclick="document.getElementById('72').play();">
-        <audio id="72" title="Title">
-          <source src="samples/junglejungle/Control Loop.wav" />
-        </audio>
+        <img class="soundboardimg" src="images/brown.png" alt="samples/junglejungle/Control Loop.wav" onclick="playSound(72);"/>
       </figure>
       <figure>
-        <img class="soundboardimg" src="images/brown.png" alt="" onclick="document.getElementById('73').play();">
-        <audio id="73" title="Title">
-          <source src="samples/junglejungle/Difference Bass.wav" />
-        </audio>
+        <img class="soundboardimg" src="images/brown.png" alt="samples/junglejungle/Difference Bass.wav" onclick="playSound(73);"/>
       </figure>
       <figure>
-        <img class="soundboardimg" src="images/brown.png" alt="" onclick="document.getElementById('74').play();">
-        <audio id="74" title="Title">
-          <source src="samples/junglejungle/Dred Bass.wav" />
-        </audio>
+        <img class="soundboardimg" src="images/brown.png" alt="samples/junglejungle/Dred Bass.wav" onclick="playSound(74);"/>
       </figure>
       <figure>
-        <img class="soundboardimg" src="images/brown.png" alt="" onclick="document.getElementById('75').play();">
-        <audio id="75" title="Title">
-          <source src="samples/junglejungle/Ganga Rewind.wav" />
-        </audio>
+        <img class="soundboardimg" src="images/brown.png" alt="samples/junglejungle/Ganga Rewind.wav" onclick="playSound(75);"/>
       </figure>
       <figure>
-        <img class="soundboardimg" src="images/brown.png" alt="" onclick="document.getElementById('76').play();">
-        <audio id="76" title="Title">
-          <source src="samples/totallyowns/letawomanjim.mp3" />
-        </audio>
+        <img class="soundboardimg" src="images/brown.png" alt="samples/totallyowns/letawomanjim.mp3" onclick="playSound(76);"/>
       </figure>
       <figure>
-        <img class="soundboardimg" src="images/brown.png" alt="" onclick="document.getElementById('77').play();">
-        <audio id="77" title="Title">
-          <source src="samples/totallyowns/13.wav" />
-        </audio>
+        <img class="soundboardimg" src="images/brown.png" alt="samples/totallyowns/13.wav" onclick="playSound(77);"/>
       </figure>
       <figure>
-        <img class="soundboardimg" src="images/brown.png" alt="" onclick="document.getElementById('78').play();">
-        <audio id="78" title="Title">
-          <source src="samples/totallyowns/12.wav" />
-        </audio>
+        <img class="soundboardimg" src="images/brown.png" alt="samples/totallyowns/12.wav" onclick="playSound(78);"/>
       </figure>
       <figure>
-        <img class="soundboardimg" src="images/brown.png" alt="" onclick="document.getElementById('79').play();">
-        <audio id="79" title="Title">
-          <source src="samples/totallyowns/sinisterbass4.mp3" />
-        </audio>
+        <img class="soundboardimg" src="images/brown.png" alt="samples/totallyowns/sinisterbass4.mp3" onclick="playSound(79);"/>
       </figure>
       <figure>
-        <img class="soundboardimg" src="images/brown.png" alt="" onclick="document.getElementById('80').play();">
-        <audio id="80" title="Title">
-          <source src="samples/totallyowns/sinisterbass3.mp3" />
-        </audio>
+        <img class="soundboardimg" src="images/brown.png" alt="samples/totallyowns/sinisterbass3.mp3" onclick="playSound(80);"/>
       </figure>
       <figure>
-        <img class="soundboardimg" src="images/brown.png" alt="" onclick="document.getElementById('81').play();">
-        <audio id="81" title="Title">
-          <source src="samples/metalheadz/28.wav" />
-        </audio>
+        <img class="soundboardimg" src="images/brown.png" alt="samples/metalheadz/28.wav" onclick="playSound(81);"/>
       </figure>
       <figure>
-        <img class="soundboardimg" src="images/brown.png" alt="" onclick="document.getElementById('82').play();">
-        <audio id="82" title="Title">
-          <source src="samples/metalheadz/MET05 Reece.wav" />
-        </audio>
+        <img class="soundboardimg" src="images/brown.png" alt="samples/metalheadz/MET05 Reece.wav" onclick="playSound(82);"/>
       </figure>
       <figure>
-        <img class="soundboardimg" src="images/brown.png" alt="" onclick="document.getElementById('83').play();">
-        <audio id="83" title="Title">
-          <source src="samples/metalheadz/29.wav" />
-        </audio>
+        <img class="soundboardimg" src="images/brown.png" alt="samples/metalheadz/29.wav" onclick="playSound(83);"/>
       </figure>
       <figure>
-        <img class="soundboardimg" src="images/brown.png" alt="" onclick="document.getElementById('84').play();">
-        <audio id="84" title="Title">
-          <source src="samples/looperman/looperman-l-2900134-0140612-instrumental-like-deadmau5.mp3" />
-        </audio>
+        <img class="soundboardimg" src="images/brown.png" alt="samples/looperman/looperman-l-2900134-0140612-instrumental-like-deadmau5.mp3" onclick="playSound(84);"/>
       </figure>
       <figure>
-        <img class="soundboardimg" src="images/brown.png" alt="" onclick="document.getElementById('85').play();">
-        <audio id="85" title="Title">
-          <source src="samples/looperman/looperman-l-0780748-0064225-quizzen-dubstep-wobble-part-1.mp3" />
-        </audio>
+        <img class="soundboardimg" src="images/brown.png" alt="samples/looperman/looperman-l-0780748-0064225-quizzen-dubstep-wobble-part-1.mp3" onclick="playSound(85);"/>
       </figure>
       <figure>
-        <img class="soundboardimg" src="images/brown.png" alt="" onclick="document.getElementById('86').play();">
-        <audio id="86" title="Title">
-          <source src="samples/looperman/looperman-l-3340075-0177137-future-loop.mp3" />
-        </audio>
+        <img class="soundboardimg" src="images/brown.png" alt="samples/looperman/looperman-l-3340075-0177137-future-loop.mp3" onclick="playSound(86);"/>
       </figure>
       <figure>
-        <img class="soundboardimg" src="images/brown.png" alt="" onclick="document.getElementById('87').play();">
-        <audio id="87" title="Title">
-          <source src="samples/looperman/looperman-l-0589833-0052120-mmedia-dubstep-wobble-3-138bpm.mp3" />
-        </audio>
+        <img class="soundboardimg" src="images/brown.png" alt="samples/looperman/looperman-l-0589833-0052120-mmedia-dubstep-wobble-3-138bpm.mp3" onclick="playSound(87);"/>
       </figure>
       <figure>
-        <img class="soundboardimg" src="images/brown.png" alt="" onclick="document.getElementById('88').play();">
-        <audio id="88" title="Title">
-          <source src="samples/looperman/looperman-l-1044386-0069101-timmydarkside-heavy-dubstep-wobble.mp3" />
-        </audio>
+        <img class="soundboardimg" src="images/brown.png" alt="samples/looperman/looperman-l-1044386-0069101-timmydarkside-heavy-dubstep-wobble.mp3" onclick="playSound(88);"/>
       </figure>
       <figure>
-        <img class="soundboardimg" src="images/brown.png" alt="" onclick="document.getElementById('89').play();">
-        <audio id="89" title="Title">
-          <source src="samples/looperman/looperman-l-0186161-0061912-spivkurl-dirty-wobbles-2.mp3" />
-        </audio>
+        <img class="soundboardimg" src="images/brown.png" alt="samples/looperman/looperman-l-0186161-0061912-spivkurl-dirty-wobbles-2.mp3" onclick="playSound(89);"/>
       </figure>
       <figure>
-        <img class="soundboardimg" src="images/brown.png" alt="" onclick="document.getElementById('90').play();">
-        <audio id="90" title="Title">
-          <source src="samples/waproduction/WACTFX_Hit_1.wav" />
-        </audio>
+        <img class="soundboardimg" src="images/brown.png" alt="samples/waproduction/WACTFX_Hit_1.wav" onclick="playSound(90);"/>
       </figure>
       <figure>
-        <img class="soundboardimg" src="images/brown.png" alt="" onclick="document.getElementById('91').play();">
-        <audio id="91" title="Title">
-          <source src="samples/waproduction/WAXVG_Wub_22_F.wav" />
-        </audio>
+        <img class="soundboardimg" src="images/brown.png" alt="samples/waproduction/WAXVG_Wub_22_F.wav" onclick="playSound(91);"/>
       </figure>
       <figure>
-        <img class="soundboardimg" src="images/brown.png" alt="" onclick="document.getElementById('92').play();">
-        <audio id="92" title="Title">
-          <source src="samples/waproduction/WADG_A_145BPM_Bass_Wobble_1.wav" />
-        </audio>
+        <img class="soundboardimg" src="images/brown.png" alt="samples/waproduction/WADG_A_145BPM_Bass_Wobble_1.wav" onclick="playSound(92);"/>
       </figure>
       <figure>
-        <img class="soundboardimg" src="images/brown.png" alt="" onclick="document.getElementById('93').play();">
-        <audio id="93" title="Title">
-          <source src="samples/waproduction/WAXVG_Wub_1_F.wav" />
-        </audio>
+        <img class="soundboardimg" src="images/brown.png" alt="samples/waproduction/WAXVG_Wub_1_F.wav" onclick="playSound(93);"/>
       </figure>
       <figure>
-        <img class="soundboardimg" src="images/brown.png" alt="" onclick="document.getElementById('94').play();">
-        <audio id="94" title="Title">
-          <source src="samples/waproduction/WADG_E_140BPM_Pac.wav" />
-        </audio>
+        <img class="soundboardimg" src="images/brown.png" alt="samples/waproduction/WADG_E_140BPM_Pac.wav" onclick="playSound(94);"/>
       </figure>
       <figure>
-        <img class="soundboardimg" src="images/brown.png" alt="" onclick="document.getElementById('95').play();">
-        <audio id="95" title="Title">
-          <source src="samples/waproduction/WADG_F_145BPM_Distorted_Wobble_5.wav" />
-        </audio>
+        <img class="soundboardimg" src="images/brown.png" alt="samples/waproduction/WADG_F_145BPM_Distorted_Wobble_5.wav" onclick="playSound(95);"/>
       </figure>
       <figure>
-        <img class="soundboardimg" src="images/brown.png" alt="" onclick="document.getElementById('96').play();">
-        <audio id="96" title="Title">
-          <source src="samples/waproduction/WARDR_E_Wet_Bass_Shot.wav" />
-        </audio>
+        <img class="soundboardimg" src="images/brown.png" alt="samples/waproduction/WARDR_E_Wet_Bass_Shot.wav" onclick="playSound(96);"/>
       </figure>
       <figure>
-        <img class="soundboardimg" src="images/brown.png" alt="" onclick="document.getElementById('97').play();">
-        <audio id="97" title="Title">
-          <source src="samples/ghosthack/hat/HiHat4.wav" />
-        </audio>
+        <img class="soundboardimg" src="images/brown.png" alt="samples/ghosthack/hat/HiHat4.wav" onclick="playSound(97);"/>
       </figure>
       <figure>
-        <img class="soundboardimg" src="images/brown.png" alt="" onclick="document.getElementById('98').play();">
-        <audio id="98" title="Title">
-          <source src="samples/ghosthack/hat/HiHat2.wav" />
-        </audio>
+        <img class="soundboardimg" src="images/brown.png" alt="samples/ghosthack/hat/HiHat2.wav" onclick="playSound(98);"/>
       </figure>
       <figure>
-        <img class="soundboardimg" src="images/brown.png" alt="" onclick="document.getElementById('99').play();">
-        <audio id="99" title="Title">
-          <source src="samples/ghosthack/Bassline2.wav" />
-        </audio>
+        <img class="soundboardimg" src="images/brown.png" alt="samples/ghosthack/Bassline2.wav" onclick="playSound(99);"/>
       </figure>
       <figure>
-        <img class="soundboardimg" src="images/brown.png" alt="" onclick="document.getElementById('100').play();">
-        <audio id="100" title="Title">
-          <source src="samples/ghosthack/Conga1.wav" />
-        </audio>
+        <img class="soundboardimg" src="images/brown.png" alt="samples/ghosthack/Conga1.wav" onclick="playSound(100);"/>
       </figure>
       <figure>
-        <img class="soundboardimg" src="images/brown.png" alt="" onclick="document.getElementById('101').play();">
-        <audio id="101" title="Title">
-          <source src="samples/ghosthack/Noise1.wav" />
-        </audio>
+        <img class="soundboardimg" src="images/brown.png" alt="samples/ghosthack/Noise1.wav" onclick="playSound(101);"/>
       </figure>
       <figure>
-        <img class="soundboardimg" src="images/brown.png" alt="" onclick="document.getElementById('102').play();">
-        <audio id="102" title="Title">
-          <source src="samples/cymatics/Cymatics - Bass One Shot 51 - F%23.wav" />
-        </audio>
+        <img class="soundboardimg" src="images/brown.png" alt="samples/cymatics/Cymatics - Bass One Shot 51 - F%23.wav" onclick="playSound(102);"/>
       </figure>
       <figure>
-        <img class="soundboardimg" src="images/brown.png" alt="" onclick="document.getElementById('103').play();">
-        <audio id="103" title="Title">
-          <source src="samples/cymatics/Cymatics - Dubstep Drop Loop 5 - 150 BPM G Min.wav" />
-        </audio>
+        <img class="soundboardimg" src="images/brown.png" alt="samples/cymatics/Cymatics - Dubstep Drop Loop 5 - 150 BPM G Min.wav" onclick="playSound(103);"/>
       </figure>
       <figure>
-        <img class="soundboardimg" src="images/brown.png" alt="" onclick="document.getElementById('104').play();">
-        <audio id="104" title="Title">
-          <source src="samples/cymatics/hat/Cymatics - Dubstep Hihat 4.wav" />
-        </audio>
+        <img class="soundboardimg" src="images/brown.png" alt="samples/cymatics/hat/Cymatics - Dubstep Hihat 4.wav" onclick="playSound(104);"/>
       </figure>
       <figure>
-        <img class="soundboardimg" src="images/brown.png" alt="" onclick="document.getElementById('105').play();">
-        <audio id="105" title="Title">
-          <source src="samples/cymatics/Cymatics - Dubstep Drop Loop 2 - 150 BPM F Min.wav" />
-        </audio>
+        <img class="soundboardimg" src="images/brown.png" alt="samples/cymatics/Cymatics - Dubstep Drop Loop 2 - 150 BPM F Min.wav" onclick="playSound(105);"/>
       </figure>
       <figure>
-        <img class="soundboardimg" src="images/brown.png" alt="" onclick="document.getElementById('106').play();">
-        <audio id="106" title="Title">
-          <source src="samples/cymatics/Cymatics - Dubstep Growl 5 - F.wav" />
-        </audio>
+        <img class="soundboardimg" src="images/brown.png" alt="samples/cymatics/Cymatics - Dubstep Growl 5 - F.wav" onclick="playSound(106);"/>
       </figure>
       <figure>
-        <img class="soundboardimg" src="images/brown.png" alt="" onclick="document.getElementById('107').play();">
-        <audio id="107" title="Title">
-          <source src="samples/cymatics/Cymatics - Terror Bass E 043.wav" />
-        </audio>
+        <img class="soundboardimg" src="images/brown.png" alt="samples/cymatics/Cymatics - Terror Bass E 043.wav" onclick="playSound(107);"/>
       </figure>
       <figure>
-        <img class="soundboardimg" src="images/brown.png" alt="" onclick="document.getElementById('108').play();">
-        <audio id="108" title="Title">
-          <source src="samples/cymatics/Cymatics - Dubstep Drop Loop 6 - 160 BPM F Min.wav" />
-        </audio>
+        <img class="soundboardimg" src="images/brown.png" alt="samples/cymatics/Cymatics - Dubstep Drop Loop 6 - 160 BPM F Min.wav" onclick="playSound(108);"/>
       </figure>
 
-
-      <ul id="doc" class="list floated soundboard clearfix">
-      </ul>
     </section>
 
 
@@ -685,7 +358,17 @@
               <li><a href="https://github.com/pilkch/beatpad">Source code</a></li>
             </ul>
 
-            This is a mash up of these two projects:
+            Based on this project:
+            <ul>
+              <li><a href="https://github.com/pilkch/soundboard">Soundboard</a></li>
+            </ul>
+
+            And extended with this library to add multiple concurrent sounds to play:
+            <ul>
+              <li><a href="https://github.com/CreateJS/SoundJS">SoundJS</a></li>
+            </ul>
+
+            Which is a mash up of these two projects:
             <ul>
               <li><a href="https://github.com/sk33lz/bootstrap-html5-soundboard">Bootstrap HTML5 Soundboard</a></li>
               <li><a href="https://www.sitepoint.com/using-modern-css-to-build-a-responsive-image-grid/">Using Modern CSS to Build a Responsive Image Grid</a></li>
@@ -731,6 +414,158 @@ function closeOverlay() {
 <script src="js/jquery-1.8.2.min.js"></script>
 <script src="js/bootstrap/bootstrap-transition.js"></script>
 <script src="js/bootstrap/bootstrap-collapse.js"></script>
+
+
+<script type="text/javascript" src="lib/soundjs-NEXT.js"></script>
+<!-- We also provide hosted minified versions of all CreateJS libraries.
+  http://code.createjs.com -->
+
+<script id="editable">
+  var preload;
+
+  function init() {
+    console.log("init");
+    if (!createjs.Sound.initializeDefaultPlugins()) {
+      console.log("init initializeDefaultPlugins Failed");
+      document.getElementById("error").style.display = "block";
+      document.getElementById("content").style.display = "none";
+      return;
+    }
+
+    var assetsPath = "./";
+    var sounds = [
+      { src: "samples/cymatics/tom/Cymatics - Terror Tom 012.wav", id: '1' },
+      { src: "samples/cymatics/tom/Cymatics - Terror Tom 002.wav", id: '2' },
+      { src: "samples/cymatics/crash/Cymatics - Raptor Crash 1.wav", id: '3' },
+      { src: "samples/ghosthack/snare/Snare2.wav", id: '4' },
+      { src: "samples/ghosthack/snare/Snare8.wav", id: '5' },
+      { src: "samples/ghosthack/snare/Snare5.wav", id: '6' },
+      { src: "samples/ghosthack/snare/Snare7.wav", id: '7' },
+      { src: "samples/cymatics/snare/Cymatics - Dubstep Snare 8 - A.wav", id: '8' },
+      { src: "samples/cymatics/snare/Cymatics - Dubstep Snare 2 - E.wav", id: '9' },
+      { src: "samples/cymatics/snare/Cymatics - Dubstep Snare 5 - G.wav", id: '10' },
+      { src: "samples/antidote audio/kick/Antidote Audio - Dubstep Kick 02.wav", id: '11' },
+      { src: "samples/antidote audio/kick/Antidote Audio - Dubstep Kick 04.wav", id: '12' },
+      { src: "samples/antidote audio/kick/Antidote Audio - Dubstep Kick 03.wav", id: '13' },
+      { src: "samples/antidote audio/kick/Antidote Audio - Dubstep Kick 01.wav", id: '14' },
+      { src: "samples/cymatics/kick/Cymatics - Dubstep Kick 2 - C.wav", id: '15' },
+      { src: "samples/cymatics/kick/Cymatics - Dubstep Kick 5 - G.wav", id: '16' },
+      { src: "samples/cymatics/kick/Cymatics - Grime Kick 7.wav", id: '17' },
+      { src: "samples/totallyowns/bass/dnbsamples_bass21.wav", id: '18' },
+      { src: "samples/totallyowns/bass/dnbsamples_bass25.wav", id: '19' },
+      { src: "samples/totallyowns/bass/bombbass.wav", id: '20' },
+      { src: "samples/totallyowns/bass/BassStab2.wav", id: '21' },
+      { src: "samples/totallyowns/bass/dnbsamples_bass7.wav", id: '22' },
+      { src: "samples/totallyowns/bass/bassStab.wav", id: '23' },
+      { src: "samples/metalheadz/bass/Hidden Agenda sub.wav", id: '24' },
+      { src: "samples/metalheadz/bass/Source Direct bass.wav", id: '25' },
+      { src: "samples/metalheadz/bass/Hidden Agenga bass.wav", id: '26' },
+      { src: "samples/metalheadz/bass/Lemon D bass.wav", id: '27' },
+      { src: "samples/ghosthack/bass/Bassdrum3.wav", id: '28' },
+      { src: "samples/ghosthack/bass/Bassdrum2.wav", id: '29' },
+      { src: "samples/ghosthack/bass/Bassdrum4.wav", id: '30' },
+      { src: "samples/ghosthack/bass/Bassdrum1.wav", id: '31' },
+      { src: "samples/junglejungle/synth/Warned Hit 2.wav", id: '32' },
+      { src: "samples/junglejungle/synth/Warned Hit.wav", id: '33' },
+      { src: "samples/junglejungle/synth/Walk Bass.wav", id: '34' },
+      { src: "samples/totallyowns/synth/11.wav", id: '35' },
+      { src: "samples/metalheadz/synth/98synthstab.wav", id: '36' },
+      { src: "samples/waproduction/synth/WABHD_Synth_Shot_01_F.wav", id: '37' },
+      { src: "samples/waproduction/synth/WABHD_Synth_Shot_C%23_46.wav", id: '38' },
+      { src: "samples/waproduction/synth/WABHD_Synth_Shot_13_A.wav", id: '39' },
+      { src: "samples/waproduction/synth/WABHD_Synth_Shot_F_43.wav", id: '40' },
+      { src: "samples/ghosthack/synth/FX2.wav", id: '41' },
+      { src: "samples/ghosthack/synth/FX1.wav", id: '42' },
+      { src: "samples/ghosthack/synth/FX3.wav", id: '43' },
+      { src: "samples/ghosthack/synth/FXSaw.wav", id: '44' },
+      { src: "samples/waproduction/808/Medium/WAXVG_808_1_E_Medium.wav", id: '45' },
+      { src: "samples/waproduction/808/Medium/WAXVG_808_10_F_Medium.wav", id: '46' },
+      { src: "samples/waproduction/808/Heavy/WAXVG_808_8_F_Heavy.wav", id: '47' },
+      { src: "samples/waproduction/808/Heavy/WAXVG_808_1_E_Heavy.wav", id: '48' },
+      { src: "samples/waproduction/808/Mild/WAXVG_808_8_Eb_Mild.wav", id: '49' },
+      { src: "samples/waproduction/808/Mild/WAXVG_808_1_F_Mild.wav", id: '50' },
+      { src: "samples/waproduction/808/Mild/WAXVG_808_14_E_Mild.wav", id: '51' },
+      { src: "samples/waproduction/808/White Noise/WAXVG_808_8_F_White_Noise.wav", id: '52' },
+      { src: "samples/totallyowns/break/dnbsamples_break17.wav", id: '53' },
+      { src: "samples/totallyowns/break/dnbsamples_break2.wav", id: '54' },
+      { src: "samples/totallyowns/break/dnbsamples_break19.wav", id: '55' },
+      { src: "samples/junglejungle/voice/Massive Vox.wav", id: '56' },
+      { src: "samples/junglejungle/voice/Town Underground Vox.wav", id: '57' },
+      { src: "samples/junglejungle/voice/Circles Vox.wav", id: '58' },
+      { src: "samples/junglejungle/voice/Control Vox.wav", id: '59' },
+      { src: "samples/junglejungle/voice/Soul Vox.wav", id: '60' },
+      { src: "samples/junglejungle/voice/On Fire Vox.wav", id: '61' },
+      { src: "samples/junglejungle/voice/Worries Soundboy.wav", id: '62' },
+      { src: "samples/junglejungle/voice/My Sound Rude Boy.wav", id: '63' },
+      { src: "samples/cymatics/voice/Cymatics - 1 2 3 Jump 4 - 140 BPM.wav", id: '64' },
+      { src: "samples/cymatics/voice/Cymatics - Throw Yo Hands Up - 140 BPM.wav", id: '65' },
+      { src: "samples/junglejungle/Flutes Rhodes.wav", id: '66' },
+      { src: "samples/junglejungle/Centuries Vocode.wav", id: '67' },
+      { src: "samples/junglejungle/Flutes Flute.wav", id: '68' },
+      { src: "samples/junglejungle/Terrorist Vox Hit.wav", id: '69' },
+      { src: "samples/junglejungle/Champion Scratch.wav", id: '70' },
+      { src: "samples/junglejungle/Cosmik Rev.wav", id: '71' },
+      { src: "samples/junglejungle/Control Loop.wav", id: '72' },
+      { src: "samples/junglejungle/Difference Bass.wav", id: '73' },
+      { src: "samples/junglejungle/Dred Bass.wav", id: '74' },
+      { src: "samples/junglejungle/Ganga Rewind.wav", id: '75' },
+      { src: "samples/totallyowns/letawomanjim.mp3", id: '76' },
+      { src: "samples/totallyowns/13.wav", id: '77' },
+      { src: "samples/totallyowns/12.wav", id: '78' },
+      { src: "samples/totallyowns/sinisterbass4.mp3", id: '79' },
+      { src: "samples/totallyowns/sinisterbass3.mp3", id: '80' },
+      { src: "samples/metalheadz/28.wav", id: '81' },
+      { src: "samples/metalheadz/MET05 Reece.wav", id: '82' },
+      { src: "samples/metalheadz/29.wav", id: '83' },
+      { src: "samples/looperman/looperman-l-2900134-0140612-instrumental-like-deadmau5.mp3", id: '84' },
+      { src: "samples/looperman/looperman-l-0780748-0064225-quizzen-dubstep-wobble-part-1.mp3", id: '85' },
+      { src: "samples/looperman/looperman-l-3340075-0177137-future-loop.mp3", id: '86' },
+      { src: "samples/looperman/looperman-l-0589833-0052120-mmedia-dubstep-wobble-3-138bpm.mp3", id: '87' },
+      { src: "samples/looperman/looperman-l-1044386-0069101-timmydarkside-heavy-dubstep-wobble.mp3", id: '88' },
+      { src: "samples/looperman/looperman-l-0186161-0061912-spivkurl-dirty-wobbles-2.mp3", id: '89' },
+      { src: "samples/waproduction/WACTFX_Hit_1.wav", id: '90' },
+      { src: "samples/waproduction/WAXVG_Wub_22_F.wav", id: '91' },
+      { src: "samples/waproduction/WADG_A_145BPM_Bass_Wobble_1.wav", id: '92' },
+      { src: "samples/waproduction/WAXVG_Wub_1_F.wav", id: '93' },
+      { src: "samples/waproduction/WADG_E_140BPM_Pac.wav", id: '94' },
+      { src: "samples/waproduction/WADG_F_145BPM_Distorted_Wobble_5.wav", id: '95' },
+      { src: "samples/waproduction/WARDR_E_Wet_Bass_Shot.wav", id: '96' },
+      { src: "samples/ghosthack/hat/HiHat4.wav", id: '97' },
+      { src: "samples/ghosthack/hat/HiHat2.wav", id: '98' },
+      { src: "samples/ghosthack/Bassline2.wav", id: '99' },
+      { src: "samples/ghosthack/Conga1.wav", id: '100' },
+      { src: "samples/ghosthack/Noise1.wav", id: '101' },
+      { src: "samples/cymatics/Cymatics - Bass One Shot 51 - F%23.wav", id: '102' },
+      { src: "samples/cymatics/Cymatics - Dubstep Drop Loop 5 - 150 BPM G Min.wav", id: '103' },
+      { src: "samples/cymatics/hat/Cymatics - Dubstep Hihat 4.wav", id: '104' },
+      { src: "samples/cymatics/Cymatics - Dubstep Drop Loop 2 - 150 BPM F Min.wav", id: '105' },
+      { src: "samples/cymatics/Cymatics - Dubstep Growl 5 - F.wav", id: '106' },
+      { src: "samples/cymatics/Cymatics - Terror Bass E 043.wav", id: '107' },
+      { src: "samples/cymatics/Cymatics - Dubstep Drop Loop 6 - 160 BPM F Min.wav", id: '108' },
+
+    ];
+
+    createjs.Sound.registerSounds(sounds, assetsPath);
+  }
+
+  function stop() {
+    if (preload != null) {
+      preload.close();
+    }
+
+    createjs.Sound.stop();
+  }
+
+  function playSound(id) {
+    // Play the sound: play (src, interrupt, delay, offset, loop, volume, pan)
+    var instance = createjs.Sound.play(id);
+    if (instance == null || instance.playState == createjs.Sound.PLAY_FAILED) {
+      console.log("Error playing sound");
+      return;
+    }
+  }
+</script>
+
 
   </body>
 </html>

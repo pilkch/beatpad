@@ -166,10 +166,10 @@ int main(int argc, char **argv)
     return EXIT_FAILURE;
   }
 
-  // Get the text before and after the "INSERT_BUTTONS" line in the file
+  // Split up the text before the "INSERT_BUTTONS" line in the file, to "INSERT_SOUNDS" and everything after it
   const std::string before = contents.substr(0, contents.find("INSERT_BUTTONS"));
-  const std::string after = contents.substr(contents.find("INSERT_BUTTONS") + strlen("INSERT_BUTTONS")); 
-
+  const std::string middle = contents.substr(contents.find("INSERT_BUTTONS") + strlen("INSERT_BUTTONS"), contents.find("INSERT_SOUNDS") - (contents.find("INSERT_BUTTONS") + strlen("INSERT_BUTTONS")));
+  const std::string after = contents.substr(contents.find("INSERT_SOUNDS") + strlen("INSERT_SOUNDS"));
 
   const std::string sOutputFile = "index.html";
 
@@ -197,19 +197,27 @@ int main(int argc, char **argv)
     };
     beatpad::GetAudioFilesInDirectory("samples", folders);
 
-    // Write out each item
+    // Write out each button
     size_t id = 0;
     for (auto& folder : folders) {
       const std::string colour = folder.colour;
       for (auto& file : folder.files) {
         id++;
-        const std::string sTitle = "Title";
         o<<"      <figure>"<<std::endl;
-        o<<"        <img class=\"soundboardimg\" src=\"images/"<<colour<<".png\" alt=\"\" onclick=\"document.getElementById('"<<id<<"').play();\">"<<std::endl;
-        o<<"        <audio id=\""<<id<<"\" title=\""<<sTitle<<"\">"<<std::endl;
-        o<<"          <source src=\""<<beatpad::HTMLEncode(file)<<"\" />"<<std::endl;
-        o<<"        </audio>"<<std::endl;
+        o<<"        <img class=\"soundboardimg\" src=\"images/"<<colour<<".png\" alt=\""<<beatpad::HTMLEncode(file)<<"\" onclick=\"playSound("<<id<<");\"/>"<<std::endl;
         o<<"      </figure>"<<std::endl;
+      }
+    }
+    
+    o<<middle;
+
+    // Write out each sound
+    id = 0;
+    for (auto& folder : folders) {
+      const std::string colour = folder.colour;
+      for (auto& file : folder.files) {
+        id++;
+        o<<"      { src: \""<<beatpad::HTMLEncode(file)<<"\", id: '"<<id<<"' },"<<std::endl;
       }
     }
 

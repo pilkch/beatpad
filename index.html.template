@@ -17,12 +17,9 @@
     <title>Beat Pad</title>
   </head>
 
-  <body>
+  <body onload="init();">
     <section id="soundboard">
 INSERT_BUTTONS
-
-      <ul id="doc" class="list floated soundboard clearfix">
-      </ul>
     </section>
 
 
@@ -37,7 +34,17 @@ INSERT_BUTTONS
               <li><a href="https://github.com/pilkch/beatpad">Source code</a></li>
             </ul>
 
-            This is a mash up of these two projects:
+            Based on this project:
+            <ul>
+              <li><a href="https://github.com/pilkch/soundboard">Soundboard</a></li>
+            </ul>
+
+            And extended with this library to add multiple concurrent sounds to play:
+            <ul>
+              <li><a href="https://github.com/CreateJS/SoundJS">SoundJS</a></li>
+            </ul>
+
+            Which is a mash up of these two projects:
             <ul>
               <li><a href="https://github.com/sk33lz/bootstrap-html5-soundboard">Bootstrap HTML5 Soundboard</a></li>
               <li><a href="https://www.sitepoint.com/using-modern-css-to-build-a-responsive-image-grid/">Using Modern CSS to Build a Responsive Image Grid</a></li>
@@ -83,6 +90,50 @@ function closeOverlay() {
 <script src="js/jquery-1.8.2.min.js"></script>
 <script src="js/bootstrap/bootstrap-transition.js"></script>
 <script src="js/bootstrap/bootstrap-collapse.js"></script>
+
+
+<script type="text/javascript" src="lib/soundjs-NEXT.js"></script>
+<!-- We also provide hosted minified versions of all CreateJS libraries.
+  http://code.createjs.com -->
+
+<script id="editable">
+  var preload;
+
+  function init() {
+    console.log("init");
+    if (!createjs.Sound.initializeDefaultPlugins()) {
+      console.log("init initializeDefaultPlugins Failed");
+      document.getElementById("error").style.display = "block";
+      document.getElementById("content").style.display = "none";
+      return;
+    }
+
+    var assetsPath = "./";
+    var sounds = [
+INSERT_SOUNDS
+    ];
+
+    createjs.Sound.registerSounds(sounds, assetsPath);
+  }
+
+  function stop() {
+    if (preload != null) {
+      preload.close();
+    }
+
+    createjs.Sound.stop();
+  }
+
+  function playSound(id) {
+    // Play the sound: play (src, interrupt, delay, offset, loop, volume, pan)
+    var instance = createjs.Sound.play(id);
+    if (instance == null || instance.playState == createjs.Sound.PLAY_FAILED) {
+      console.log("Error playing sound");
+      return;
+    }
+  }
+</script>
+
 
   </body>
 </html>
