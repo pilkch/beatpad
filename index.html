@@ -7,135 +7,343 @@
 
     <meta name="viewport" content="width=device-width,initial-scale=1">
 
-    <meta name="description" content="HTML5 Soundboard">
+    <meta name="description" content="HTML5 Beat Pad">
     <meta name="author" content="Chris Pilkington">
     
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/bootstrap-responsive.css">
     <link rel="stylesheet" href="css/style.css">
 
-    <title>Soundboard</title>
+    <title>Beat Pad</title>
   </head>
 
-  <body>
+  <body onload="init();">
     <section id="soundboard">
       <figure>
-        <img class="soundboardimg" src="images/red.png" alt="" onclick="document.getElementById('correct').play();">
-        <audio id="correct" title="Correct!">
-          <source src="audio/131660__bertrof__game-sound-correct.wav" />
-        </audio>
+        <img class="soundboardimg" src="images/red.png" alt="samples/cymatics/tom/Cymatics - Terror Tom 012.wav" onclick="playSound(1);"/>
       </figure>
       <figure>
-        <img class="soundboardimg" src="images/red.png" alt="" onclick="document.getElementById('pipe').play();">
-        <audio id="pipe" title="Pipe">
-          <source src="audio/13290__schademans__pipe9.wav" />
-        </audio>
+        <img class="soundboardimg" src="images/red.png" alt="samples/cymatics/tom/Cymatics - Terror Tom 002.wav" onclick="playSound(2);"/>
       </figure>
       <figure>
-        <img class="soundboardimg" src="images/red.png" alt="" onclick="document.getElementById('synth').play();">
-        <audio id="synth" title="Synth">
-          <source src="audio/169108__rsanchez44__synthpad-2.wav" />
-        </audio>
+        <img class="soundboardimg" src="images/orange.png" alt="samples/cymatics/crash/Cymatics - Raptor Crash 1.wav" onclick="playSound(3);"/>
       </figure>
       <figure>
-        <img class="soundboardimg" src="images/red.png" alt="" onclick="document.getElementById('boomkick').play();">
-        <audio id="boomkick" title="Boom Kick">
-          <source src="audio/195396__goup-1__boom-kick.wav" />
-        </audio>
+        <img class="soundboardimg" src="images/mustard.png" alt="samples/ghosthack/snare/Snare2.wav" onclick="playSound(4);"/>
       </figure>
       <figure>
-        <img class="soundboardimg" src="images/red.png" alt="" onclick="document.getElementById('alien').play();">
-        <audio id="alien" title="Alien">
-          <source src="audio/208532__18hiltc__alien-bomb-timer.wav" />
-        </audio>
+        <img class="soundboardimg" src="images/mustard.png" alt="samples/ghosthack/snare/Snare8.wav" onclick="playSound(5);"/>
       </figure>
       <figure>
-        <img class="soundboardimg" src="images/blue.png" alt="" onclick="document.getElementById('acmesiren').play();">
-        <audio id="acmesiren" title="Acme Siren">
-          <source src="audio/331610__applauseav__acme-siren.wav" />
-        </audio>
+        <img class="soundboardimg" src="images/mustard.png" alt="samples/ghosthack/snare/Snare5.wav" onclick="playSound(6);"/>
       </figure>
       <figure>
-        <img class="soundboardimg" src="images/blue.png" alt="" onclick="document.getElementById('thunder').play();">
-        <audio id="thunder" title="Thunder">
-          <source src="audio/33246__ljudman__oska.wav" />
-        </audio>
+        <img class="soundboardimg" src="images/mustard.png" alt="samples/ghosthack/snare/Snare7.wav" onclick="playSound(7);"/>
       </figure>
       <figure>
-        <img class="soundboardimg" src="images/blue.png" alt="" onclick="document.getElementById('gong').play();">
-        <audio id="gong" title="Gong">
-          <source src="audio/chinese-gong-daniel_simon.wav" />
-        </audio>
+        <img class="soundboardimg" src="images/mustard.png" alt="samples/cymatics/snare/Cymatics - Dubstep Snare 8 - A.wav" onclick="playSound(8);"/>
       </figure>
       <figure>
-        <img class="soundboardimg" src="images/blue.png" alt="" onclick="document.getElementById('churchbells').play();">
-        <audio id="churchbells" title="Church Bells">
-          <source src="audio/church-chime-daniel_simon.wav" />
-        </audio>
+        <img class="soundboardimg" src="images/mustard.png" alt="samples/cymatics/snare/Cymatics - Dubstep Snare 2 - E.wav" onclick="playSound(9);"/>
       </figure>
       <figure>
-        <img class="soundboardimg" src="images/blue.png" alt="" onclick="document.getElementById('horn').play();">
-        <audio id="horn" title="Horn">
-          <source src="audio/dixie-horn_daniel-simion.wav" />
-        </audio>
+        <img class="soundboardimg" src="images/mustard.png" alt="samples/cymatics/snare/Cymatics - Dubstep Snare 5 - G.wav" onclick="playSound(10);"/>
       </figure>
       <figure>
-        <img class="soundboardimg" src="images/green.png" alt="" onclick="document.getElementById('airhorn').play();">
-        <audio id="airhorn" title="Air Horn">
-          <source src="audio/fire-truck-air-horn_daniel-simion.wav" />
-        </audio>
+        <img class="soundboardimg" src="images/yellow.png" alt="samples/antidote audio/kick/Antidote Audio - Dubstep Kick 02.wav" onclick="playSound(11);"/>
       </figure>
       <figure>
-        <img class="soundboardimg" src="images/green.png" alt="" onclick="document.getElementById('seagulls').play();">
-        <audio id="seagulls" title="Seagulls">
-          <source src="audio/flock-of-seagulls_daniel-simion.wav" />
-        </audio>
+        <img class="soundboardimg" src="images/yellow.png" alt="samples/antidote audio/kick/Antidote Audio - Dubstep Kick 04.wav" onclick="playSound(12);"/>
       </figure>
       <figure>
-        <img class="soundboardimg" src="images/green.png" alt="" onclick="document.getElementById('bell').play();">
-        <audio id="bell" title="Bell">
-          <source src="audio/front-desk-bells-daniel_simon.wav" />
-        </audio>
+        <img class="soundboardimg" src="images/yellow.png" alt="samples/antidote audio/kick/Antidote Audio - Dubstep Kick 03.wav" onclick="playSound(13);"/>
       </figure>
       <figure>
-        <img class="soundboardimg" src="images/green.png" alt="" onclick="document.getElementById('heartbeat').play();">
-        <audio id="heartbeat" title="Heart Beat">
-          <source src="audio/human-heartbeat-daniel_simon.wav" />
-        </audio>
+        <img class="soundboardimg" src="images/yellow.png" alt="samples/antidote audio/kick/Antidote Audio - Dubstep Kick 01.wav" onclick="playSound(14);"/>
       </figure>
       <figure>
-        <img class="soundboardimg" src="images/green.png" alt="" onclick="document.getElementById('bird').play();">
-        <audio id="bird" title="Bird">
-          <source src="audio/meadowlark_daniel-simion.wav" />
-        </audio>
+        <img class="soundboardimg" src="images/yellow.png" alt="samples/cymatics/kick/Cymatics - Dubstep Kick 2 - C.wav" onclick="playSound(15);"/>
       </figure>
       <figure>
-        <img class="soundboardimg" src="images/yellow.png" alt="" onclick="document.getElementById('schoolbell').play();">
-        <audio id="schoolbell" title="School Bell">
-          <source src="audio/old-fashioned-school-bell-daniel_simon.wav" />
-        </audio>
+        <img class="soundboardimg" src="images/yellow.png" alt="samples/cymatics/kick/Cymatics - Dubstep Kick 5 - G.wav" onclick="playSound(16);"/>
       </figure>
       <figure>
-        <img class="soundboardimg" src="images/yellow.png" alt="" onclick="document.getElementById('whistle').play();">
-        <audio id="whistle" title="Whistle">
-          <source src="audio/police-whistle-daniel_simon.wav" />
-        </audio>
+        <img class="soundboardimg" src="images/yellow.png" alt="samples/cymatics/kick/Cymatics - Grime Kick 7.wav" onclick="playSound(17);"/>
       </figure>
       <figure>
-        <img class="soundboardimg" src="images/yellow.png" alt="" onclick="document.getElementById('trainwhistle').play();">
-        <audio id="trainwhistle" title="Train Whistle">
-          <source src="audio/steam-train-whistle-daniel_simon.wav" />
-        </audio>
+        <img class="soundboardimg" src="images/cyan.png" alt="samples/totallyowns/bass/dnbsamples_bass21.wav" onclick="playSound(18);"/>
       </figure>
       <figure>
-        <img class="soundboardimg" src="images/yellow.png" alt="" onclick="document.getElementById('splash').play();">
-        <audio id="splash" title="Splash">
-          <source src="audio/Video_Game_Splash-Ploor-699235037.wav" />
-        </audio>
+        <img class="soundboardimg" src="images/cyan.png" alt="samples/totallyowns/bass/dnbsamples_bass25.wav" onclick="playSound(19);"/>
+      </figure>
+      <figure>
+        <img class="soundboardimg" src="images/cyan.png" alt="samples/totallyowns/bass/bombbass.wav" onclick="playSound(20);"/>
+      </figure>
+      <figure>
+        <img class="soundboardimg" src="images/cyan.png" alt="samples/totallyowns/bass/BassStab2.wav" onclick="playSound(21);"/>
+      </figure>
+      <figure>
+        <img class="soundboardimg" src="images/cyan.png" alt="samples/totallyowns/bass/dnbsamples_bass7.wav" onclick="playSound(22);"/>
+      </figure>
+      <figure>
+        <img class="soundboardimg" src="images/cyan.png" alt="samples/totallyowns/bass/bassStab.wav" onclick="playSound(23);"/>
+      </figure>
+      <figure>
+        <img class="soundboardimg" src="images/cyan.png" alt="samples/metalheadz/bass/Hidden Agenda sub.wav" onclick="playSound(24);"/>
+      </figure>
+      <figure>
+        <img class="soundboardimg" src="images/cyan.png" alt="samples/metalheadz/bass/Source Direct bass.wav" onclick="playSound(25);"/>
+      </figure>
+      <figure>
+        <img class="soundboardimg" src="images/cyan.png" alt="samples/metalheadz/bass/Hidden Agenga bass.wav" onclick="playSound(26);"/>
+      </figure>
+      <figure>
+        <img class="soundboardimg" src="images/cyan.png" alt="samples/metalheadz/bass/Lemon D bass.wav" onclick="playSound(27);"/>
+      </figure>
+      <figure>
+        <img class="soundboardimg" src="images/cyan.png" alt="samples/ghosthack/bass/Bassdrum3.wav" onclick="playSound(28);"/>
+      </figure>
+      <figure>
+        <img class="soundboardimg" src="images/cyan.png" alt="samples/ghosthack/bass/Bassdrum2.wav" onclick="playSound(29);"/>
+      </figure>
+      <figure>
+        <img class="soundboardimg" src="images/cyan.png" alt="samples/ghosthack/bass/Bassdrum4.wav" onclick="playSound(30);"/>
+      </figure>
+      <figure>
+        <img class="soundboardimg" src="images/cyan.png" alt="samples/ghosthack/bass/Bassdrum1.wav" onclick="playSound(31);"/>
+      </figure>
+      <figure>
+        <img class="soundboardimg" src="images/teal.png" alt="samples/junglejungle/synth/Warned Hit 2.wav" onclick="playSound(32);"/>
+      </figure>
+      <figure>
+        <img class="soundboardimg" src="images/teal.png" alt="samples/junglejungle/synth/Warned Hit.wav" onclick="playSound(33);"/>
+      </figure>
+      <figure>
+        <img class="soundboardimg" src="images/teal.png" alt="samples/junglejungle/synth/Walk Bass.wav" onclick="playSound(34);"/>
+      </figure>
+      <figure>
+        <img class="soundboardimg" src="images/teal.png" alt="samples/totallyowns/synth/11.wav" onclick="playSound(35);"/>
+      </figure>
+      <figure>
+        <img class="soundboardimg" src="images/teal.png" alt="samples/metalheadz/synth/98synthstab.wav" onclick="playSound(36);"/>
+      </figure>
+      <figure>
+        <img class="soundboardimg" src="images/teal.png" alt="samples/waproduction/synth/WABHD_Synth_Shot_01_F.wav" onclick="playSound(37);"/>
+      </figure>
+      <figure>
+        <img class="soundboardimg" src="images/teal.png" alt="samples/waproduction/synth/WABHD_Synth_Shot_C%23_46.wav" onclick="playSound(38);"/>
+      </figure>
+      <figure>
+        <img class="soundboardimg" src="images/teal.png" alt="samples/waproduction/synth/WABHD_Synth_Shot_13_A.wav" onclick="playSound(39);"/>
+      </figure>
+      <figure>
+        <img class="soundboardimg" src="images/teal.png" alt="samples/waproduction/synth/WABHD_Synth_Shot_F_43.wav" onclick="playSound(40);"/>
+      </figure>
+      <figure>
+        <img class="soundboardimg" src="images/teal.png" alt="samples/ghosthack/synth/FX2.wav" onclick="playSound(41);"/>
+      </figure>
+      <figure>
+        <img class="soundboardimg" src="images/teal.png" alt="samples/ghosthack/synth/FX1.wav" onclick="playSound(42);"/>
+      </figure>
+      <figure>
+        <img class="soundboardimg" src="images/teal.png" alt="samples/ghosthack/synth/FX3.wav" onclick="playSound(43);"/>
+      </figure>
+      <figure>
+        <img class="soundboardimg" src="images/teal.png" alt="samples/ghosthack/synth/FXSaw.wav" onclick="playSound(44);"/>
+      </figure>
+      <figure>
+        <img class="soundboardimg" src="images/blue.png" alt="samples/waproduction/808/Medium/WAXVG_808_1_E_Medium.wav" onclick="playSound(45);"/>
+      </figure>
+      <figure>
+        <img class="soundboardimg" src="images/blue.png" alt="samples/waproduction/808/Medium/WAXVG_808_10_F_Medium.wav" onclick="playSound(46);"/>
+      </figure>
+      <figure>
+        <img class="soundboardimg" src="images/blue.png" alt="samples/waproduction/808/Heavy/WAXVG_808_8_F_Heavy.wav" onclick="playSound(47);"/>
+      </figure>
+      <figure>
+        <img class="soundboardimg" src="images/blue.png" alt="samples/waproduction/808/Heavy/WAXVG_808_1_E_Heavy.wav" onclick="playSound(48);"/>
+      </figure>
+      <figure>
+        <img class="soundboardimg" src="images/blue.png" alt="samples/waproduction/808/Mild/WAXVG_808_8_Eb_Mild.wav" onclick="playSound(49);"/>
+      </figure>
+      <figure>
+        <img class="soundboardimg" src="images/blue.png" alt="samples/waproduction/808/Mild/WAXVG_808_1_F_Mild.wav" onclick="playSound(50);"/>
+      </figure>
+      <figure>
+        <img class="soundboardimg" src="images/blue.png" alt="samples/waproduction/808/Mild/WAXVG_808_14_E_Mild.wav" onclick="playSound(51);"/>
+      </figure>
+      <figure>
+        <img class="soundboardimg" src="images/blue.png" alt="samples/waproduction/808/White Noise/WAXVG_808_8_F_White_Noise.wav" onclick="playSound(52);"/>
+      </figure>
+      <figure>
+        <img class="soundboardimg" src="images/purple.png" alt="samples/totallyowns/break/dnbsamples_break17.wav" onclick="playSound(53);"/>
+      </figure>
+      <figure>
+        <img class="soundboardimg" src="images/purple.png" alt="samples/totallyowns/break/dnbsamples_break2.wav" onclick="playSound(54);"/>
+      </figure>
+      <figure>
+        <img class="soundboardimg" src="images/purple.png" alt="samples/totallyowns/break/dnbsamples_break19.wav" onclick="playSound(55);"/>
+      </figure>
+      <figure>
+        <img class="soundboardimg" src="images/yellow.png" alt="samples/junglejungle/voice/Massive Vox.wav" onclick="playSound(56);"/>
+      </figure>
+      <figure>
+        <img class="soundboardimg" src="images/yellow.png" alt="samples/junglejungle/voice/Town Underground Vox.wav" onclick="playSound(57);"/>
+      </figure>
+      <figure>
+        <img class="soundboardimg" src="images/yellow.png" alt="samples/junglejungle/voice/Circles Vox.wav" onclick="playSound(58);"/>
+      </figure>
+      <figure>
+        <img class="soundboardimg" src="images/yellow.png" alt="samples/junglejungle/voice/Control Vox.wav" onclick="playSound(59);"/>
+      </figure>
+      <figure>
+        <img class="soundboardimg" src="images/yellow.png" alt="samples/junglejungle/voice/Soul Vox.wav" onclick="playSound(60);"/>
+      </figure>
+      <figure>
+        <img class="soundboardimg" src="images/yellow.png" alt="samples/junglejungle/voice/On Fire Vox.wav" onclick="playSound(61);"/>
+      </figure>
+      <figure>
+        <img class="soundboardimg" src="images/yellow.png" alt="samples/junglejungle/voice/Worries Soundboy.wav" onclick="playSound(62);"/>
+      </figure>
+      <figure>
+        <img class="soundboardimg" src="images/yellow.png" alt="samples/junglejungle/voice/My Sound Rude Boy.wav" onclick="playSound(63);"/>
+      </figure>
+      <figure>
+        <img class="soundboardimg" src="images/yellow.png" alt="samples/cymatics/voice/Cymatics - 1 2 3 Jump 4 - 140 BPM.wav" onclick="playSound(64);"/>
+      </figure>
+      <figure>
+        <img class="soundboardimg" src="images/yellow.png" alt="samples/cymatics/voice/Cymatics - Throw Yo Hands Up - 140 BPM.wav" onclick="playSound(65);"/>
+      </figure>
+      <figure>
+        <img class="soundboardimg" src="images/brown.png" alt="samples/junglejungle/Flutes Rhodes.wav" onclick="playSound(66);"/>
+      </figure>
+      <figure>
+        <img class="soundboardimg" src="images/brown.png" alt="samples/junglejungle/Centuries Vocode.wav" onclick="playSound(67);"/>
+      </figure>
+      <figure>
+        <img class="soundboardimg" src="images/brown.png" alt="samples/junglejungle/Flutes Flute.wav" onclick="playSound(68);"/>
+      </figure>
+      <figure>
+        <img class="soundboardimg" src="images/brown.png" alt="samples/junglejungle/Terrorist Vox Hit.wav" onclick="playSound(69);"/>
+      </figure>
+      <figure>
+        <img class="soundboardimg" src="images/brown.png" alt="samples/junglejungle/Champion Scratch.wav" onclick="playSound(70);"/>
+      </figure>
+      <figure>
+        <img class="soundboardimg" src="images/brown.png" alt="samples/junglejungle/Cosmik Rev.wav" onclick="playSound(71);"/>
+      </figure>
+      <figure>
+        <img class="soundboardimg" src="images/brown.png" alt="samples/junglejungle/Control Loop.wav" onclick="playSound(72);"/>
+      </figure>
+      <figure>
+        <img class="soundboardimg" src="images/brown.png" alt="samples/junglejungle/Difference Bass.wav" onclick="playSound(73);"/>
+      </figure>
+      <figure>
+        <img class="soundboardimg" src="images/brown.png" alt="samples/junglejungle/Dred Bass.wav" onclick="playSound(74);"/>
+      </figure>
+      <figure>
+        <img class="soundboardimg" src="images/brown.png" alt="samples/junglejungle/Ganga Rewind.wav" onclick="playSound(75);"/>
+      </figure>
+      <figure>
+        <img class="soundboardimg" src="images/brown.png" alt="samples/totallyowns/letawomanjim.mp3" onclick="playSound(76);"/>
+      </figure>
+      <figure>
+        <img class="soundboardimg" src="images/brown.png" alt="samples/totallyowns/13.wav" onclick="playSound(77);"/>
+      </figure>
+      <figure>
+        <img class="soundboardimg" src="images/brown.png" alt="samples/totallyowns/12.wav" onclick="playSound(78);"/>
+      </figure>
+      <figure>
+        <img class="soundboardimg" src="images/brown.png" alt="samples/totallyowns/sinisterbass4.mp3" onclick="playSound(79);"/>
+      </figure>
+      <figure>
+        <img class="soundboardimg" src="images/brown.png" alt="samples/totallyowns/sinisterbass3.mp3" onclick="playSound(80);"/>
+      </figure>
+      <figure>
+        <img class="soundboardimg" src="images/brown.png" alt="samples/metalheadz/28.wav" onclick="playSound(81);"/>
+      </figure>
+      <figure>
+        <img class="soundboardimg" src="images/brown.png" alt="samples/metalheadz/MET05 Reece.wav" onclick="playSound(82);"/>
+      </figure>
+      <figure>
+        <img class="soundboardimg" src="images/brown.png" alt="samples/metalheadz/29.wav" onclick="playSound(83);"/>
+      </figure>
+      <figure>
+        <img class="soundboardimg" src="images/brown.png" alt="samples/looperman/looperman-l-2900134-0140612-instrumental-like-deadmau5.mp3" onclick="playSound(84);"/>
+      </figure>
+      <figure>
+        <img class="soundboardimg" src="images/brown.png" alt="samples/looperman/looperman-l-0780748-0064225-quizzen-dubstep-wobble-part-1.mp3" onclick="playSound(85);"/>
+      </figure>
+      <figure>
+        <img class="soundboardimg" src="images/brown.png" alt="samples/looperman/looperman-l-3340075-0177137-future-loop.mp3" onclick="playSound(86);"/>
+      </figure>
+      <figure>
+        <img class="soundboardimg" src="images/brown.png" alt="samples/looperman/looperman-l-0589833-0052120-mmedia-dubstep-wobble-3-138bpm.mp3" onclick="playSound(87);"/>
+      </figure>
+      <figure>
+        <img class="soundboardimg" src="images/brown.png" alt="samples/looperman/looperman-l-1044386-0069101-timmydarkside-heavy-dubstep-wobble.mp3" onclick="playSound(88);"/>
+      </figure>
+      <figure>
+        <img class="soundboardimg" src="images/brown.png" alt="samples/looperman/looperman-l-0186161-0061912-spivkurl-dirty-wobbles-2.mp3" onclick="playSound(89);"/>
+      </figure>
+      <figure>
+        <img class="soundboardimg" src="images/brown.png" alt="samples/waproduction/WACTFX_Hit_1.wav" onclick="playSound(90);"/>
+      </figure>
+      <figure>
+        <img class="soundboardimg" src="images/brown.png" alt="samples/waproduction/WAXVG_Wub_22_F.wav" onclick="playSound(91);"/>
+      </figure>
+      <figure>
+        <img class="soundboardimg" src="images/brown.png" alt="samples/waproduction/WADG_A_145BPM_Bass_Wobble_1.wav" onclick="playSound(92);"/>
+      </figure>
+      <figure>
+        <img class="soundboardimg" src="images/brown.png" alt="samples/waproduction/WAXVG_Wub_1_F.wav" onclick="playSound(93);"/>
+      </figure>
+      <figure>
+        <img class="soundboardimg" src="images/brown.png" alt="samples/waproduction/WADG_E_140BPM_Pac.wav" onclick="playSound(94);"/>
+      </figure>
+      <figure>
+        <img class="soundboardimg" src="images/brown.png" alt="samples/waproduction/WADG_F_145BPM_Distorted_Wobble_5.wav" onclick="playSound(95);"/>
+      </figure>
+      <figure>
+        <img class="soundboardimg" src="images/brown.png" alt="samples/waproduction/WARDR_E_Wet_Bass_Shot.wav" onclick="playSound(96);"/>
+      </figure>
+      <figure>
+        <img class="soundboardimg" src="images/brown.png" alt="samples/ghosthack/hat/HiHat4.wav" onclick="playSound(97);"/>
+      </figure>
+      <figure>
+        <img class="soundboardimg" src="images/brown.png" alt="samples/ghosthack/hat/HiHat2.wav" onclick="playSound(98);"/>
+      </figure>
+      <figure>
+        <img class="soundboardimg" src="images/brown.png" alt="samples/ghosthack/Bassline2.wav" onclick="playSound(99);"/>
+      </figure>
+      <figure>
+        <img class="soundboardimg" src="images/brown.png" alt="samples/ghosthack/Conga1.wav" onclick="playSound(100);"/>
+      </figure>
+      <figure>
+        <img class="soundboardimg" src="images/brown.png" alt="samples/ghosthack/Noise1.wav" onclick="playSound(101);"/>
+      </figure>
+      <figure>
+        <img class="soundboardimg" src="images/brown.png" alt="samples/cymatics/Cymatics - Bass One Shot 51 - F%23.wav" onclick="playSound(102);"/>
+      </figure>
+      <figure>
+        <img class="soundboardimg" src="images/brown.png" alt="samples/cymatics/Cymatics - Dubstep Drop Loop 5 - 150 BPM G Min.wav" onclick="playSound(103);"/>
+      </figure>
+      <figure>
+        <img class="soundboardimg" src="images/brown.png" alt="samples/cymatics/hat/Cymatics - Dubstep Hihat 4.wav" onclick="playSound(104);"/>
+      </figure>
+      <figure>
+        <img class="soundboardimg" src="images/brown.png" alt="samples/cymatics/Cymatics - Dubstep Drop Loop 2 - 150 BPM F Min.wav" onclick="playSound(105);"/>
+      </figure>
+      <figure>
+        <img class="soundboardimg" src="images/brown.png" alt="samples/cymatics/Cymatics - Dubstep Growl 5 - F.wav" onclick="playSound(106);"/>
+      </figure>
+      <figure>
+        <img class="soundboardimg" src="images/brown.png" alt="samples/cymatics/Cymatics - Terror Bass E 043.wav" onclick="playSound(107);"/>
+      </figure>
+      <figure>
+        <img class="soundboardimg" src="images/brown.png" alt="samples/cymatics/Cymatics - Dubstep Drop Loop 6 - 160 BPM F Min.wav" onclick="playSound(108);"/>
       </figure>
 
-      <ul id="doc" class="list floated soundboard clearfix">
-      </ul>
     </section>
 
 
@@ -147,39 +355,44 @@
           <h4>Code</h4>
           <p>
             <ul>
-              <li><a href="https://github.com/pilkch/soundboard">Source code</a></li>
+              <li><a href="https://github.com/pilkch/beatpad">Source code</a></li>
             </ul>
 
-            This is a mash up of these two projects:
+            Based on this project:
+            <ul>
+              <li><a href="https://github.com/pilkch/soundboard">Soundboard</a></li>
+            </ul>
+
+            And extended with this library to add multiple concurrent sounds to play:
+            <ul>
+              <li><a href="https://github.com/CreateJS/SoundJS">SoundJS</a></li>
+            </ul>
+
+            Which is a mash up of these two projects:
             <ul>
               <li><a href="https://github.com/sk33lz/bootstrap-html5-soundboard">Bootstrap HTML5 Soundboard</a></li>
               <li><a href="https://www.sitepoint.com/using-modern-css-to-build-a-responsive-image-grid/">Using Modern CSS to Build a Responsive Image Grid</a></li>
             </ul>
           </p>
 
-          <h4>Sounds</h4>
+          <h4>Samples</h4>
           <p>
-            These free sounds are used:
+            These free samples are used:
             <ul>
-              <li><a href="https://freesound.org/people/schademans/sounds/13290/">https://freesound.org/people/schademans/sounds/13290/</a></li>
-              <li><a href="https://freesound.org/people/ljudman/sounds/33246/">https://freesound.org/people/ljudman/sounds/33246/</a></li>
-              <li><a href="https://freesound.org/people/18hiltc/sounds/208532/">https://freesound.org/people/18hiltc/sounds/208532/</a></li>
-              <li><a href="https://freesound.org/people/iskweldog/sounds/200971/">https://freesound.org/people/iskweldog/sounds/200971/</a></li>
-              <li><a href="https://freesound.org/people/rsanchez44/sounds/169108/">https://freesound.org/people/rsanchez44/sounds/169108/</a></li>
-              <li><a href="https://freesound.org/people/Bertrof/sounds/131660/">https://freesound.org/people/Bertrof/sounds/131660/</a></li>
-              <li><a href="https://freesound.org/people/Goup_1/sounds/195396/">https://freesound.org/people/Goup_1/sounds/195396/</a></li>
-              <li><a href="http://soundbible.com/2100-Splash-Rock-In-Lake.html">http://soundbible.com/2100-Splash-Rock-In-Lake.html</a></li>
-              <li><a href="http://soundbible.com/2148-Chinese-Gong.html">http://soundbible.com/2148-Chinese-Gong.html</a></li>
-              <li><a href="http://soundbible.com/2162-Human-Heartbeat.html">http://soundbible.com/2162-Human-Heartbeat.html</a></li>
-              <li><a href="http://soundbible.com/2171-Church-Bell-Chime.html">http://soundbible.com/2171-Church-Bell-Chime.html</a></li>
-              <li><a href="http://soundbible.com/2180-Meadowlark.html">http://soundbible.com/2180-Meadowlark.html</a></li>
-              <li><a href="http://soundbible.com/2179-Dixie-Horn.html">http://soundbible.com/2179-Dixie-Horn.html</a></li>
-              <li><a href="http://soundbible.com/2177-Steam-Train-Whistle.html">http://soundbible.com/2177-Steam-Train-Whistle.html</a></li>
-              <li><a href="http://soundbible.com/2184-Police-Whistle.html">http://soundbible.com/2184-Police-Whistle.html</a></li>
-              <li><a href="http://soundbible.com/2185-Old-School-Bell.html">http://soundbible.com/2185-Old-School-Bell.html</a></li>
-              <li><a href="http://soundbible.com/2190-Front-Desk-Bell.html">http://soundbible.com/2190-Front-Desk-Bell.html</a></li>
-              <li><a href="http://soundbible.com/2192-Fire-Truck-Horn.html">http://soundbible.com/2192-Fire-Truck-Horn.html</a></li>
-              <li><a href="http://soundbible.com/2193-Flock-Seagulls.html">http://soundbible.com/2193-Flock-Seagulls.html</a></li>
+              <li><a href="https://www.antidoteaudio.com/freebies">https://www.antidoteaudio.com/freebies</a></li>
+              <li><a href="https://cymatics.fm/collections/">https://cymatics.fm/collections/</a></li>
+              <li><a href="https://www.ghosthack.de/free_sample_packs/100-Dubstep-Samples/">https://www.ghosthack.de/free_sample_packs/100-Dubstep-Samples/</a></li>
+              <li><a href="https://www.ghosthack.de/free_sample_packs/trap-drum-loops/">https://www.ghosthack.de/free_sample_packs/trap-drum-loops/</a></li>
+              <li><a href="https://www.ghosthack.de/free_sample_packs/Dubstep---Trap-Sample-Pack-4/">https://www.ghosthack.de/free_sample_packs/Dubstep---Trap-Sample-Pack-4/</a></li>
+              <li><a href="https://www.blumarten.com/product/junglejungle-free-sample-pack/">https://www.blumarten.com/product/junglejungle-free-sample-pack/</a></li>
+              <li><a href="https://www.looperman.com/loops/detail/69101/heavy-dubstep-wobble-by-timmydarkside-free-140bpm-dubstep-bass-loop">https://www.looperman.com/loops/detail/69101/heavy-dubstep-wobble-by-timmydarkside-free-140bpm-dubstep-bass-loop</a></li>
+              <li><a href="https://www.looperman.com/loops/detail/64225/dubstep-wobble-part-1-by-quizzen-free-140bpm-dubstep-wobble-bass-loop">https://www.looperman.com/loops/detail/64225/dubstep-wobble-part-1-by-quizzen-free-140bpm-dubstep-wobble-bass-loop</a></li>
+              <li><a href="https://www.looperman.com/loops/detail/61912/dirty-wobbles-2-by-spivkurl-free-140bpm-dubstep-wobble-bass-loop">https://www.looperman.com/loops/detail/61912/dirty-wobbles-2-by-spivkurl-free-140bpm-dubstep-wobble-bass-loop</a></li>
+              <li><a href="https://www.looperman.com/loops/detail/52120/dubstep-wobble-3-138bpm-by-mmedia-free-138bpm-dubstep-bass-loop">https://www.looperman.com/loops/detail/52120/dubstep-wobble-3-138bpm-by-mmedia-free-138bpm-dubstep-bass-loop</a></li>
+              <li><a href="https://www.looperman.com/loops/detail/140612/drop-like-deadmau5-130bpm-house-synth-loop">https://www.looperman.com/loops/detail/140612/drop-like-deadmau5-130bpm-house-synth-loop</a></li>
+              <li><a href="https://www.looperman.com/loops/detail/177137/future-loop-90bpm-electronic-pad-loop">https://www.looperman.com/loops/detail/177137/future-loop-90bpm-electronic-pad-loop</a></li>
+              <li><a href="http://doa.totallyowns.co.uk/samples/packs/doa/">http://doa.totallyowns.co.uk/samples/packs/doa/</a></li>
+              <li><a href="https://page.waproduction.com/free-anniversary-collection-6">https://page.waproduction.com/free-anniversary-collection-6</a></li>
             </ul>
           </p>
         </p>
@@ -201,6 +414,158 @@ function closeOverlay() {
 <script src="js/jquery-1.8.2.min.js"></script>
 <script src="js/bootstrap/bootstrap-transition.js"></script>
 <script src="js/bootstrap/bootstrap-collapse.js"></script>
+
+
+<script type="text/javascript" src="lib/soundjs-NEXT.js"></script>
+<!-- We also provide hosted minified versions of all CreateJS libraries.
+  http://code.createjs.com -->
+
+<script id="editable">
+  var preload;
+
+  function init() {
+    console.log("init");
+    if (!createjs.Sound.initializeDefaultPlugins()) {
+      console.log("init initializeDefaultPlugins Failed");
+      document.getElementById("error").style.display = "block";
+      document.getElementById("content").style.display = "none";
+      return;
+    }
+
+    var assetsPath = "./";
+    var sounds = [
+      { src: "samples/cymatics/tom/Cymatics - Terror Tom 012.wav", id: '1' },
+      { src: "samples/cymatics/tom/Cymatics - Terror Tom 002.wav", id: '2' },
+      { src: "samples/cymatics/crash/Cymatics - Raptor Crash 1.wav", id: '3' },
+      { src: "samples/ghosthack/snare/Snare2.wav", id: '4' },
+      { src: "samples/ghosthack/snare/Snare8.wav", id: '5' },
+      { src: "samples/ghosthack/snare/Snare5.wav", id: '6' },
+      { src: "samples/ghosthack/snare/Snare7.wav", id: '7' },
+      { src: "samples/cymatics/snare/Cymatics - Dubstep Snare 8 - A.wav", id: '8' },
+      { src: "samples/cymatics/snare/Cymatics - Dubstep Snare 2 - E.wav", id: '9' },
+      { src: "samples/cymatics/snare/Cymatics - Dubstep Snare 5 - G.wav", id: '10' },
+      { src: "samples/antidote audio/kick/Antidote Audio - Dubstep Kick 02.wav", id: '11' },
+      { src: "samples/antidote audio/kick/Antidote Audio - Dubstep Kick 04.wav", id: '12' },
+      { src: "samples/antidote audio/kick/Antidote Audio - Dubstep Kick 03.wav", id: '13' },
+      { src: "samples/antidote audio/kick/Antidote Audio - Dubstep Kick 01.wav", id: '14' },
+      { src: "samples/cymatics/kick/Cymatics - Dubstep Kick 2 - C.wav", id: '15' },
+      { src: "samples/cymatics/kick/Cymatics - Dubstep Kick 5 - G.wav", id: '16' },
+      { src: "samples/cymatics/kick/Cymatics - Grime Kick 7.wav", id: '17' },
+      { src: "samples/totallyowns/bass/dnbsamples_bass21.wav", id: '18' },
+      { src: "samples/totallyowns/bass/dnbsamples_bass25.wav", id: '19' },
+      { src: "samples/totallyowns/bass/bombbass.wav", id: '20' },
+      { src: "samples/totallyowns/bass/BassStab2.wav", id: '21' },
+      { src: "samples/totallyowns/bass/dnbsamples_bass7.wav", id: '22' },
+      { src: "samples/totallyowns/bass/bassStab.wav", id: '23' },
+      { src: "samples/metalheadz/bass/Hidden Agenda sub.wav", id: '24' },
+      { src: "samples/metalheadz/bass/Source Direct bass.wav", id: '25' },
+      { src: "samples/metalheadz/bass/Hidden Agenga bass.wav", id: '26' },
+      { src: "samples/metalheadz/bass/Lemon D bass.wav", id: '27' },
+      { src: "samples/ghosthack/bass/Bassdrum3.wav", id: '28' },
+      { src: "samples/ghosthack/bass/Bassdrum2.wav", id: '29' },
+      { src: "samples/ghosthack/bass/Bassdrum4.wav", id: '30' },
+      { src: "samples/ghosthack/bass/Bassdrum1.wav", id: '31' },
+      { src: "samples/junglejungle/synth/Warned Hit 2.wav", id: '32' },
+      { src: "samples/junglejungle/synth/Warned Hit.wav", id: '33' },
+      { src: "samples/junglejungle/synth/Walk Bass.wav", id: '34' },
+      { src: "samples/totallyowns/synth/11.wav", id: '35' },
+      { src: "samples/metalheadz/synth/98synthstab.wav", id: '36' },
+      { src: "samples/waproduction/synth/WABHD_Synth_Shot_01_F.wav", id: '37' },
+      { src: "samples/waproduction/synth/WABHD_Synth_Shot_C%23_46.wav", id: '38' },
+      { src: "samples/waproduction/synth/WABHD_Synth_Shot_13_A.wav", id: '39' },
+      { src: "samples/waproduction/synth/WABHD_Synth_Shot_F_43.wav", id: '40' },
+      { src: "samples/ghosthack/synth/FX2.wav", id: '41' },
+      { src: "samples/ghosthack/synth/FX1.wav", id: '42' },
+      { src: "samples/ghosthack/synth/FX3.wav", id: '43' },
+      { src: "samples/ghosthack/synth/FXSaw.wav", id: '44' },
+      { src: "samples/waproduction/808/Medium/WAXVG_808_1_E_Medium.wav", id: '45' },
+      { src: "samples/waproduction/808/Medium/WAXVG_808_10_F_Medium.wav", id: '46' },
+      { src: "samples/waproduction/808/Heavy/WAXVG_808_8_F_Heavy.wav", id: '47' },
+      { src: "samples/waproduction/808/Heavy/WAXVG_808_1_E_Heavy.wav", id: '48' },
+      { src: "samples/waproduction/808/Mild/WAXVG_808_8_Eb_Mild.wav", id: '49' },
+      { src: "samples/waproduction/808/Mild/WAXVG_808_1_F_Mild.wav", id: '50' },
+      { src: "samples/waproduction/808/Mild/WAXVG_808_14_E_Mild.wav", id: '51' },
+      { src: "samples/waproduction/808/White Noise/WAXVG_808_8_F_White_Noise.wav", id: '52' },
+      { src: "samples/totallyowns/break/dnbsamples_break17.wav", id: '53' },
+      { src: "samples/totallyowns/break/dnbsamples_break2.wav", id: '54' },
+      { src: "samples/totallyowns/break/dnbsamples_break19.wav", id: '55' },
+      { src: "samples/junglejungle/voice/Massive Vox.wav", id: '56' },
+      { src: "samples/junglejungle/voice/Town Underground Vox.wav", id: '57' },
+      { src: "samples/junglejungle/voice/Circles Vox.wav", id: '58' },
+      { src: "samples/junglejungle/voice/Control Vox.wav", id: '59' },
+      { src: "samples/junglejungle/voice/Soul Vox.wav", id: '60' },
+      { src: "samples/junglejungle/voice/On Fire Vox.wav", id: '61' },
+      { src: "samples/junglejungle/voice/Worries Soundboy.wav", id: '62' },
+      { src: "samples/junglejungle/voice/My Sound Rude Boy.wav", id: '63' },
+      { src: "samples/cymatics/voice/Cymatics - 1 2 3 Jump 4 - 140 BPM.wav", id: '64' },
+      { src: "samples/cymatics/voice/Cymatics - Throw Yo Hands Up - 140 BPM.wav", id: '65' },
+      { src: "samples/junglejungle/Flutes Rhodes.wav", id: '66' },
+      { src: "samples/junglejungle/Centuries Vocode.wav", id: '67' },
+      { src: "samples/junglejungle/Flutes Flute.wav", id: '68' },
+      { src: "samples/junglejungle/Terrorist Vox Hit.wav", id: '69' },
+      { src: "samples/junglejungle/Champion Scratch.wav", id: '70' },
+      { src: "samples/junglejungle/Cosmik Rev.wav", id: '71' },
+      { src: "samples/junglejungle/Control Loop.wav", id: '72' },
+      { src: "samples/junglejungle/Difference Bass.wav", id: '73' },
+      { src: "samples/junglejungle/Dred Bass.wav", id: '74' },
+      { src: "samples/junglejungle/Ganga Rewind.wav", id: '75' },
+      { src: "samples/totallyowns/letawomanjim.mp3", id: '76' },
+      { src: "samples/totallyowns/13.wav", id: '77' },
+      { src: "samples/totallyowns/12.wav", id: '78' },
+      { src: "samples/totallyowns/sinisterbass4.mp3", id: '79' },
+      { src: "samples/totallyowns/sinisterbass3.mp3", id: '80' },
+      { src: "samples/metalheadz/28.wav", id: '81' },
+      { src: "samples/metalheadz/MET05 Reece.wav", id: '82' },
+      { src: "samples/metalheadz/29.wav", id: '83' },
+      { src: "samples/looperman/looperman-l-2900134-0140612-instrumental-like-deadmau5.mp3", id: '84' },
+      { src: "samples/looperman/looperman-l-0780748-0064225-quizzen-dubstep-wobble-part-1.mp3", id: '85' },
+      { src: "samples/looperman/looperman-l-3340075-0177137-future-loop.mp3", id: '86' },
+      { src: "samples/looperman/looperman-l-0589833-0052120-mmedia-dubstep-wobble-3-138bpm.mp3", id: '87' },
+      { src: "samples/looperman/looperman-l-1044386-0069101-timmydarkside-heavy-dubstep-wobble.mp3", id: '88' },
+      { src: "samples/looperman/looperman-l-0186161-0061912-spivkurl-dirty-wobbles-2.mp3", id: '89' },
+      { src: "samples/waproduction/WACTFX_Hit_1.wav", id: '90' },
+      { src: "samples/waproduction/WAXVG_Wub_22_F.wav", id: '91' },
+      { src: "samples/waproduction/WADG_A_145BPM_Bass_Wobble_1.wav", id: '92' },
+      { src: "samples/waproduction/WAXVG_Wub_1_F.wav", id: '93' },
+      { src: "samples/waproduction/WADG_E_140BPM_Pac.wav", id: '94' },
+      { src: "samples/waproduction/WADG_F_145BPM_Distorted_Wobble_5.wav", id: '95' },
+      { src: "samples/waproduction/WARDR_E_Wet_Bass_Shot.wav", id: '96' },
+      { src: "samples/ghosthack/hat/HiHat4.wav", id: '97' },
+      { src: "samples/ghosthack/hat/HiHat2.wav", id: '98' },
+      { src: "samples/ghosthack/Bassline2.wav", id: '99' },
+      { src: "samples/ghosthack/Conga1.wav", id: '100' },
+      { src: "samples/ghosthack/Noise1.wav", id: '101' },
+      { src: "samples/cymatics/Cymatics - Bass One Shot 51 - F%23.wav", id: '102' },
+      { src: "samples/cymatics/Cymatics - Dubstep Drop Loop 5 - 150 BPM G Min.wav", id: '103' },
+      { src: "samples/cymatics/hat/Cymatics - Dubstep Hihat 4.wav", id: '104' },
+      { src: "samples/cymatics/Cymatics - Dubstep Drop Loop 2 - 150 BPM F Min.wav", id: '105' },
+      { src: "samples/cymatics/Cymatics - Dubstep Growl 5 - F.wav", id: '106' },
+      { src: "samples/cymatics/Cymatics - Terror Bass E 043.wav", id: '107' },
+      { src: "samples/cymatics/Cymatics - Dubstep Drop Loop 6 - 160 BPM F Min.wav", id: '108' },
+
+    ];
+
+    createjs.Sound.registerSounds(sounds, assetsPath);
+  }
+
+  function stop() {
+    if (preload != null) {
+      preload.close();
+    }
+
+    createjs.Sound.stop();
+  }
+
+  function playSound(id) {
+    // Play the sound: play (src, interrupt, delay, offset, loop, volume, pan)
+    var instance = createjs.Sound.play(id);
+    if (instance == null || instance.playState == createjs.Sound.PLAY_FAILED) {
+      console.log("Error playing sound");
+      return;
+    }
+  }
+</script>
+
 
   </body>
 </html>

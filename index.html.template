@@ -7,22 +7,19 @@
 
     <meta name="viewport" content="width=device-width,initial-scale=1">
 
-    <meta name="description" content="HTML5 Soundboard">
+    <meta name="description" content="HTML5 Beat Pad">
     <meta name="author" content="Chris Pilkington">
     
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/bootstrap-responsive.css">
     <link rel="stylesheet" href="css/style.css">
 
-    <title>Soundboard</title>
+    <title>Beat Pad</title>
   </head>
 
-  <body>
+  <body onload="init();">
     <section id="soundboard">
-INSERT_SAMPLES
-
-      <ul id="doc" class="list floated soundboard clearfix">
-      </ul>
+INSERT_BUTTONS
     </section>
 
 
@@ -34,39 +31,44 @@ INSERT_SAMPLES
           <h4>Code</h4>
           <p>
             <ul>
-              <li><a href="https://github.com/pilkch/soundboard">Source code</a></li>
+              <li><a href="https://github.com/pilkch/beatpad">Source code</a></li>
             </ul>
 
-            This is a mash up of these two projects:
+            Based on this project:
+            <ul>
+              <li><a href="https://github.com/pilkch/soundboard">Soundboard</a></li>
+            </ul>
+
+            And extended with this library to add multiple concurrent sounds to play:
+            <ul>
+              <li><a href="https://github.com/CreateJS/SoundJS">SoundJS</a></li>
+            </ul>
+
+            Which is a mash up of these two projects:
             <ul>
               <li><a href="https://github.com/sk33lz/bootstrap-html5-soundboard">Bootstrap HTML5 Soundboard</a></li>
               <li><a href="https://www.sitepoint.com/using-modern-css-to-build-a-responsive-image-grid/">Using Modern CSS to Build a Responsive Image Grid</a></li>
             </ul>
           </p>
 
-          <h4>Sounds</h4>
+          <h4>Samples</h4>
           <p>
-            These free sounds are used:
+            These free samples are used:
             <ul>
-              <li><a href="https://freesound.org/people/schademans/sounds/13290/">https://freesound.org/people/schademans/sounds/13290/</a></li>
-              <li><a href="https://freesound.org/people/ljudman/sounds/33246/">https://freesound.org/people/ljudman/sounds/33246/</a></li>
-              <li><a href="https://freesound.org/people/18hiltc/sounds/208532/">https://freesound.org/people/18hiltc/sounds/208532/</a></li>
-              <li><a href="https://freesound.org/people/iskweldog/sounds/200971/">https://freesound.org/people/iskweldog/sounds/200971/</a></li>
-              <li><a href="https://freesound.org/people/rsanchez44/sounds/169108/">https://freesound.org/people/rsanchez44/sounds/169108/</a></li>
-              <li><a href="https://freesound.org/people/Bertrof/sounds/131660/">https://freesound.org/people/Bertrof/sounds/131660/</a></li>
-              <li><a href="https://freesound.org/people/Goup_1/sounds/195396/">https://freesound.org/people/Goup_1/sounds/195396/</a></li>
-              <li><a href="http://soundbible.com/2100-Splash-Rock-In-Lake.html">http://soundbible.com/2100-Splash-Rock-In-Lake.html</a></li>
-              <li><a href="http://soundbible.com/2148-Chinese-Gong.html">http://soundbible.com/2148-Chinese-Gong.html</a></li>
-              <li><a href="http://soundbible.com/2162-Human-Heartbeat.html">http://soundbible.com/2162-Human-Heartbeat.html</a></li>
-              <li><a href="http://soundbible.com/2171-Church-Bell-Chime.html">http://soundbible.com/2171-Church-Bell-Chime.html</a></li>
-              <li><a href="http://soundbible.com/2180-Meadowlark.html">http://soundbible.com/2180-Meadowlark.html</a></li>
-              <li><a href="http://soundbible.com/2179-Dixie-Horn.html">http://soundbible.com/2179-Dixie-Horn.html</a></li>
-              <li><a href="http://soundbible.com/2177-Steam-Train-Whistle.html">http://soundbible.com/2177-Steam-Train-Whistle.html</a></li>
-              <li><a href="http://soundbible.com/2184-Police-Whistle.html">http://soundbible.com/2184-Police-Whistle.html</a></li>
-              <li><a href="http://soundbible.com/2185-Old-School-Bell.html">http://soundbible.com/2185-Old-School-Bell.html</a></li>
-              <li><a href="http://soundbible.com/2190-Front-Desk-Bell.html">http://soundbible.com/2190-Front-Desk-Bell.html</a></li>
-              <li><a href="http://soundbible.com/2192-Fire-Truck-Horn.html">http://soundbible.com/2192-Fire-Truck-Horn.html</a></li>
-              <li><a href="http://soundbible.com/2193-Flock-Seagulls.html">http://soundbible.com/2193-Flock-Seagulls.html</a></li>
+              <li><a href="https://www.antidoteaudio.com/freebies">https://www.antidoteaudio.com/freebies</a></li>
+              <li><a href="https://cymatics.fm/collections/">https://cymatics.fm/collections/</a></li>
+              <li><a href="https://www.ghosthack.de/free_sample_packs/100-Dubstep-Samples/">https://www.ghosthack.de/free_sample_packs/100-Dubstep-Samples/</a></li>
+              <li><a href="https://www.ghosthack.de/free_sample_packs/trap-drum-loops/">https://www.ghosthack.de/free_sample_packs/trap-drum-loops/</a></li>
+              <li><a href="https://www.ghosthack.de/free_sample_packs/Dubstep---Trap-Sample-Pack-4/">https://www.ghosthack.de/free_sample_packs/Dubstep---Trap-Sample-Pack-4/</a></li>
+              <li><a href="https://www.blumarten.com/product/junglejungle-free-sample-pack/">https://www.blumarten.com/product/junglejungle-free-sample-pack/</a></li>
+              <li><a href="https://www.looperman.com/loops/detail/69101/heavy-dubstep-wobble-by-timmydarkside-free-140bpm-dubstep-bass-loop">https://www.looperman.com/loops/detail/69101/heavy-dubstep-wobble-by-timmydarkside-free-140bpm-dubstep-bass-loop</a></li>
+              <li><a href="https://www.looperman.com/loops/detail/64225/dubstep-wobble-part-1-by-quizzen-free-140bpm-dubstep-wobble-bass-loop">https://www.looperman.com/loops/detail/64225/dubstep-wobble-part-1-by-quizzen-free-140bpm-dubstep-wobble-bass-loop</a></li>
+              <li><a href="https://www.looperman.com/loops/detail/61912/dirty-wobbles-2-by-spivkurl-free-140bpm-dubstep-wobble-bass-loop">https://www.looperman.com/loops/detail/61912/dirty-wobbles-2-by-spivkurl-free-140bpm-dubstep-wobble-bass-loop</a></li>
+              <li><a href="https://www.looperman.com/loops/detail/52120/dubstep-wobble-3-138bpm-by-mmedia-free-138bpm-dubstep-bass-loop">https://www.looperman.com/loops/detail/52120/dubstep-wobble-3-138bpm-by-mmedia-free-138bpm-dubstep-bass-loop</a></li>
+              <li><a href="https://www.looperman.com/loops/detail/140612/drop-like-deadmau5-130bpm-house-synth-loop">https://www.looperman.com/loops/detail/140612/drop-like-deadmau5-130bpm-house-synth-loop</a></li>
+              <li><a href="https://www.looperman.com/loops/detail/177137/future-loop-90bpm-electronic-pad-loop">https://www.looperman.com/loops/detail/177137/future-loop-90bpm-electronic-pad-loop</a></li>
+              <li><a href="http://doa.totallyowns.co.uk/samples/packs/doa/">http://doa.totallyowns.co.uk/samples/packs/doa/</a></li>
+              <li><a href="https://page.waproduction.com/free-anniversary-collection-6">https://page.waproduction.com/free-anniversary-collection-6</a></li>
             </ul>
           </p>
         </p>
@@ -88,6 +90,50 @@ function closeOverlay() {
 <script src="js/jquery-1.8.2.min.js"></script>
 <script src="js/bootstrap/bootstrap-transition.js"></script>
 <script src="js/bootstrap/bootstrap-collapse.js"></script>
+
+
+<script type="text/javascript" src="lib/soundjs-NEXT.js"></script>
+<!-- We also provide hosted minified versions of all CreateJS libraries.
+  http://code.createjs.com -->
+
+<script id="editable">
+  var preload;
+
+  function init() {
+    console.log("init");
+    if (!createjs.Sound.initializeDefaultPlugins()) {
+      console.log("init initializeDefaultPlugins Failed");
+      document.getElementById("error").style.display = "block";
+      document.getElementById("content").style.display = "none";
+      return;
+    }
+
+    var assetsPath = "./";
+    var sounds = [
+INSERT_SOUNDS
+    ];
+
+    createjs.Sound.registerSounds(sounds, assetsPath);
+  }
+
+  function stop() {
+    if (preload != null) {
+      preload.close();
+    }
+
+    createjs.Sound.stop();
+  }
+
+  function playSound(id) {
+    // Play the sound: play (src, interrupt, delay, offset, loop, volume, pan)
+    var instance = createjs.Sound.play(id);
+    if (instance == null || instance.playState == createjs.Sound.PLAY_FAILED) {
+      console.log("Error playing sound");
+      return;
+    }
+  }
+</script>
+
 
   </body>
 </html>

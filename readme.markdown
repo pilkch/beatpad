@@ -41,6 +41,10 @@ Based on this project:
 
 *   [Source code](https://chris.iluo.net/projects/soundboard)
 
+And extended with this library to add multiple concurrent sounds to play:
+
+*   [SoundJS](https://github.com/CreateJS/SoundJS)
+
 Which is a mash up of these two projects:
 
 *   [Bootstrap HTML5 Soundboard](https://github.com/sk33lz/bootstrap-html5-soundboard)
