@@ -10,6 +10,8 @@ body {
 #soundboard {
   display: flex;
   flex-wrap: wrap;
+  align-items: flex-start;
+
   justify-content: space-between; /* or space-around */
 }
 
@@ -29,19 +31,18 @@ a {
 }
 
 figure {
+  flex: 0 1 calc(20% - 10px - 2px);
+
+  max-width: 20%;
+  max-height: 20%;
+  width: auto;
+  height: auto;
   margin: 0;
   overflow: hidden;
 }
 
 audio {
 	display:none
-}
-
-.soundboardimg {
-  max-width: 400px;
-  max-height: 270px;
-  width: auto;
-  height: auto;
 }
 
 

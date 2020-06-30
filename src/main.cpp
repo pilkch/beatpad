@@ -204,7 +204,7 @@ int main(int argc, char **argv)
       for (auto& file : folder.files) {
         id++;
         o<<"      <figure>"<<std::endl;
-        o<<"        <img class=\"soundboardimg\" src=\"images/"<<colour<<".png\" alt=\""<<beatpad::HTMLEncode(file)<<"\" onclick=\"playSound("<<id<<");\"/>"<<std::endl;
+        o<<"        <img src=\"images/"<<colour<<".png\" alt=\""<<beatpad::HTMLEncode(file)<<"\" onclick=\"playSound("<<id<<");\"/>"<<std::endl;
         o<<"      </figure>"<<std::endl;
       }
     }
