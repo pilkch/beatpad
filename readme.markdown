@@ -43,7 +43,7 @@ make
 
 Based on this project:
 
-*   [Source code](https://chris.iluo.net/projects/soundboard)
+*   [soundboard](https://github.com/pilkch/soundboard)
 
 And extended with this library to add multiple concurrent sounds to play:
 
